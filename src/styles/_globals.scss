@@ -1,0 +1,72 @@
+
+.half-screen-height {
+  height: $half-screen-height;
+}
+
+.full-screen-height {
+  height: $full-screen-height;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.disabled {
+  pointer-events: none !important;
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+
+.fadeInOutAnimation {
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 2.5s;
+}
+
+.section-header {
+  font-size: 2rem;
+  font-family: Montserrat, sans-serif;
+  color: $secondary;
+  font-weight: bolder;
+  margin-bottom: 1.5em;
+}
+
+.section-header__small {
+  font-size: 1.5rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: bolder;
+  color: $secondary;
+  margin-bottom: 1.5em;
+}
+.section-header-black__small {
+  font-size: 1.5rem;
+  font-family: Montserrat, sans-serif;
+  font-weight: bolder;
+  color: $primary;
+  margin-bottom: 1.5em;
+}
+
+.header-text-black {
+  color: $primary;
+  font-weight: bolder;
+  font-size: 2rem;
+  display: grid;
+}
+
+.bg-white {
+  background-color: $tertiary !important;
+}
+
+.fixed {
+  position: sticky !important;
+  top: 0;
+}
+
+.invalid {
+  border: 2px solid crimson;
+  animation: shake 0.1s;
+}
