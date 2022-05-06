@@ -123,3 +123,4 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+/package-lock.json
