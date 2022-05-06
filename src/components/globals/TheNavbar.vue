@@ -8,12 +8,12 @@
       <i class="fas fa-bars"></i>
     </div>
     <div class="logo">
-      <img src="@/assets/logo.png" alt="Dyer's Diner Logo" class="logo">
+      <img src="@/assets/logo.webp" alt="Dyer's Diner Logo" class="logo">
     </div>
     <nav
         :class="{
           'navbar-not-visible': hideAway && alwaysVisible === false,
-          'full-screen-navbar': windowWidthInternal < 1000,
+          'full-screen-navbar': windowWidthInternal < 1064,
           'navbar-visible': navbarHidden === false,
         }"
     >
@@ -25,21 +25,6 @@
       <router-link to="/about">About</router-link>
       <router-link to="/contact">Contact</router-link>
     </nav>
-
-    <div class="ordering-and-socials">
-      <div class="socials">
-        <a id="facebook-top-link" href="" target="_blank">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a id="instagram-top-link" href="" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a id="snapchat-top-link" href="" target="_blank">
-          <i class="fab fa-snapchat"></i>
-        </a>
-      </div>
-      <router-link to="/ordering">Order Now</router-link>
-    </div>
   </div>
   <router-view/>
 </template>
@@ -57,13 +42,13 @@ export default {
       return this.$store.state.windowWidthInternal
     },
     alwaysVisible() {
-      return this.windowWidthInternal >= 1000;
+      return this.windowWidthInternal >= 1064;
     },
     hideAway() {
-      return this.windowWidthInternal < 1000 && this.closed === true;
+      return this.windowWidthInternal < 1064 && this.closed === true;
     },
     navbarHidden() {
-      return this.windowWidthInternal < 1000
+      return this.windowWidthInternal < 1064
     }
   },
   watch: {
@@ -79,43 +64,60 @@ export default {
 <style lang="scss" scoped>
 @media screen and (min-width: 1064px) {
   .navbar {
-    background: hsla(347, 49%, 18%, 1);
-    background: linear-gradient(to right, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%) !important;
-    background: -moz-linear-gradient(to right, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%) !important;
-    background: -webkit-linear-gradient(to right, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%) !important;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#461822", endColorstr="#F27302", GradientType=1);
+    justify-content: space-between !important;
+    position: fixed !important;
 
     .logo {
+      align-self: flex-start;
       transform: translateX(0) !important;
+
+      img {
+        align-self: flex-start;
+        height: 100%;
+      }
     }
 
-    .ordering-and-socials{
-      transform: translateX(0) !important;
+    .navbar-visible {
+      transform: translateX(-20%) !important;
+    }
+
+    nav {
+      align-self: flex-start;
+      position: relative;
+      text-align: center;
+      padding: 20px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 25em;
+        border-bottom: $secondary-inverted 1px solid;
+        bottom: 15px;
+      }
+
+      a {
+        font-size: 1.2rem !important;
+      }
     }
   }
 }
 
 .navbar {
-  position: fixed;
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  background: hsla(347, 49%, 18%, 1);
-  background: linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  background: -moz-linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  background: -webkit-linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#461822", endColorstr="#F27302", GradientType=1);
+  justify-content: flex-start;
   z-index: 10;
 
   .burger-menu {
-    color: $tertiary-calmer;
+    color: $white-calmer;
     font-size: 2rem;
     z-index: 11;
     position: fixed;
-    left: 0;
+    right: 0;
     top: 0;
-    transform: translate(50%, 10%);
+    transform: translate(-50%, 10%);
 
     &:hover {
       cursor: pointer;
@@ -139,7 +141,7 @@ export default {
   }
 
   .navbar-visible {
-    transform: translateX(0) !important;
+    transform: translateX(0);
   }
 
   .navbar-not-visible {
@@ -159,30 +161,28 @@ export default {
 
     .close {
       font-size: 2rem;
-      color: $tertiary-calmer;
+      color: $white-calmer;
     }
   }
 
   nav {
     display: flex;
-    margin-left: 5em;
     justify-content: center;
     align-items: center;
     gap: 1.5em;
     transition: transform 0.2s ease-in;
 
     a {
-      color: $tertiary-calmer;
+      color: $white-calmer;
       font-family: AndresDiner, Montserrat, sans-serif;
       font-size: 1.5rem;
-      font-weight: bolder;
 
       &:hover {
-        color: $tertiary;
+        color: $white;
       }
 
       &.router-link-exact-active {
-        color: $tertiary;
+        color: $white;
       }
     }
   }
@@ -192,49 +192,9 @@ export default {
     align-content: center;
     justify-content: center;
     align-items: center;
-    transform: translateX(15%);
-
-    img {
-      max-height: 80%;
-    }
-  }
-
-  .ordering-and-socials {
-    color: $tertiary-calmer;
-    font-family: AndresDiner, sans-serif;
-    display: flex;
-    gap: 0.5em;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    transform: translateX(15%);
-
-    .socials {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.8em;
-      font-size: 1.5rem;
-
-      svg {
-        &:hover {
-          color: $tertiary !important;
-          cursor: pointer;
-        }
-      }
-    }
-
-    a {
-      font-size: 1.6rem;
-      color: $tertiary-calmer;
-      font-weight: bolder;
-
-      &:hover {
-        cursor: pointer;
-        color: $tertiary;
-      }
-    }
+    height: 10em;
+    width: 12em;
+    padding: 10px;
   }
 }
 </style>

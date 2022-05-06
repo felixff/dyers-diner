@@ -40,25 +40,30 @@ export default {
 @media screen and (min-width: 1064px) {
   .container__footer {
     width: 100%;
-    background: hsla(347, 49%, 18%, 1);
-    background: linear-gradient(to right, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%) !important;
-    background: -moz-linear-gradient(to right, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%) !important;
-    background: -webkit-linear-gradient(to right, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%) !important;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#461822", endColorstr="#F27302", GradientType=1);
 
     .content__footer {
       margin-inline: auto;
       height: 100%;
       flex-direction: row;
       flex-wrap: nowrap;
-      gap: 20em !important;
+      gap: 10em !important;
 
       .section__footer {
+        max-width: 30% !important;
 
         .title__section-footer {
         }
 
         .contact__footer {
+        }
+
+        &.img__centre {
+          height: 10em;
+          display: inline !important;
+
+          img {
+            height: 100%;
+          }
         }
       }
     }
@@ -72,11 +77,6 @@ export default {
 .container__footer {
   height: 100%;
   width: 100%;
-  background: hsla(347, 49%, 18%, 1);
-  background: linear-gradient(to top, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  background: -moz-linear-gradient(to top, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  background: -webkit-linear-gradient(to top, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#461822", endColorstr="#F27302", GradientType=1);
 
   .content__footer {
     height: 100%;
@@ -84,22 +84,22 @@ export default {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
-    gap: 5em;
+    gap: 2em;
     padding: 10px;
     margin-bottom: 1em;
 
     .section__footer {
-      max-width: 30%;
+      max-width: 50%;
 
       .title__section-footer {
-        color: $tertiary-brighter;
+        color: $white-brighter;
         font-size: 1.4rem;
         font-weight: bold;
         margin-bottom: 0.5em;
       }
 
       .contact__footer {
-        color: $tertiary-brighter;
+        color: $white-brighter;
 
         .footer__social {
           font-size: 1.5rem;
@@ -107,15 +107,11 @@ export default {
       }
 
       &.img__centre {
-        height: 10em;
-
-        img {
-          height: 100%;
-        }
+        display: none;
       }
 
       .socials__footer {
-        color: $tertiary-brighter;
+        color: $white-brighter;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -124,16 +120,17 @@ export default {
         .footer__social {
           font-size: 1.5rem;
           margin: 0.2em 0.3em 0 0.3em;
+          color: $white-brighter;
         }
       }
     }
   }
 
   .copyright {
-    color: $tertiary-brighter;
+    color: $white-brighter;
     width: 80%;
     margin-inline: auto;
-    border-top: groove 1px $tertiary-brighter;
+    border-top: groove 1px $white-brighter;
     padding: 2px;
     font-size: 14px;
   }

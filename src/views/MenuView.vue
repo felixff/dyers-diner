@@ -8,6 +8,8 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.container__menu {
+  height: 100vh;
+}
 </style>
