@@ -15,6 +15,7 @@
           'navbar-not-visible': hideAway && alwaysVisible === false,
           'full-screen-navbar': windowWidthInternal < 1064,
           'navbar-visible': navbarHidden === false,
+          'fixed' : innerWindowScrolled
         }"
     >
       <div v-if="closed === false && windowWidthInternal < 1064" class="close-button" @click="changeNavbarState(true)">
@@ -26,7 +27,6 @@
       <router-link to="/contact">Contact</router-link>
     </nav>
   </div>
-  <router-view/>
 </template>
 
 <script>
@@ -49,6 +49,9 @@ export default {
     },
     navbarHidden() {
       return this.windowWidthInternal < 1064
+    },
+    innerWindowScrolled() {
+      return this.$store.state.scrollPosition > 1;
     }
   },
   watch: {
@@ -64,12 +67,10 @@ export default {
 <style lang="scss" scoped>
 @media screen and (min-width: 1064px) {
   .navbar {
-    justify-content: space-between !important;
-    position: fixed !important;
+    justify-content: center !important;
+    position: relative;
 
     .logo {
-      align-self: flex-start;
-      transform: translateX(0) !important;
 
       img {
         align-self: flex-start;
@@ -78,21 +79,20 @@ export default {
     }
 
     .navbar-visible {
-      transform: translateX(-20%) !important;
     }
 
     nav {
       align-self: flex-start;
       position: relative;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
 
       &:after {
         content: '';
         position: absolute;
         width: 25em;
         border-bottom: $secondary-inverted 1px solid;
-        bottom: 15px;
+        bottom: 20px;
       }
 
       a {
@@ -107,7 +107,8 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   z-index: 10;
 
   .burger-menu {
@@ -130,9 +131,9 @@ export default {
     flex-direction: column;
     height: 100%;
     width: 100vw;
-    background: linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-    background: -moz-linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-    background: -webkit-linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
+    background: linear-gradient(to bottom, hsla(347, 69%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
+    background: -moz-linear-gradient(to bottom, hsla(347, 69%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
+    background: -webkit-linear-gradient(to bottom, hsla(347, 69%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#461822", endColorstr="#F27302", GradientType=1);
     position: fixed;
     top: 0;
@@ -169,7 +170,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.5em;
+    gap: 3em;
     transition: transform 0.2s ease-in;
 
     a {
@@ -188,10 +189,9 @@ export default {
   }
 
   .logo {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
     height: 10em;
     width: 12em;
     padding: 10px;

@@ -1,5 +1,8 @@
 <template>
   <div class="home">
+    <div class="hero">
+      <img src="https://picsum.photos/300/200" alt="Placholder Image">
+    </div>
   </div>
 </template>
 

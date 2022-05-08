@@ -11,6 +11,10 @@
   display: none !important;
 }
 
+.fixed {
+  position: fixed !important;
+}
+
 .transparent {
   opacity: 0;
 }
@@ -59,11 +63,6 @@
 
 .bg-white {
   background-color: $white !important;
-}
-
-.fixed {
-  position: sticky !important;
-  top: 0;
 }
 
 .invalid {
