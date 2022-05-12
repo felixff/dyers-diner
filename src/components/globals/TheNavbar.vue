@@ -7,9 +7,6 @@
     >
       <i class="fas fa-bars"></i>
     </div>
-    <div class="logo">
-      <img src="@/assets/logo.webp" alt="Dyer's Diner Logo" class="logo">
-    </div>
     <nav
         :class="{
           'navbar-not-visible': hideAway && alwaysVisible === false,
@@ -68,15 +65,6 @@ export default {
 @media screen and (min-width: 1064px) {
   .navbar {
     justify-content: center !important;
-    position: relative;
-
-    .logo {
-
-      img {
-        align-self: flex-start;
-        height: 100%;
-      }
-    }
 
     .navbar-visible {
     }
@@ -103,13 +91,15 @@ export default {
 }
 
 .navbar {
-  position: relative;
+  position: fixed;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   z-index: 10;
+  transition: top 1s ease-in-out, height 1s ease-in-out;
+  background-color: red;
 
   .burger-menu {
     color: $white-calmer;
@@ -186,15 +176,6 @@ export default {
         color: $white;
       }
     }
-  }
-
-  .logo {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 10em;
-    width: 12em;
-    padding: 10px;
   }
 }
 </style>

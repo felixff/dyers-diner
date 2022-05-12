@@ -1,5 +1,8 @@
 <template>
   <the-navbar/>
+  <div style="background-color: red; height: 100vh">
+
+  </div>
   <router-view/>
   <footer>
     <the-footer/>
