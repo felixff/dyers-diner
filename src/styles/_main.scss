@@ -35,10 +35,6 @@ html:focus-within {
 }
 html {
   scroll-behavior: smooth;
-  //background: linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  //background: -moz-linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  //background: -webkit-linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#461822", endColorstr="#F27302", GradientType=1);
   background-color: $secondary-inverted;
 }
 
@@ -132,6 +128,28 @@ a {
           url('@/styles/fonts/diner/AndresDiner.woff') format('woff'),
           url('@/styles/fonts/diner/AndresDiner.ttf') format('ttf'),
           url('@/styles/fonts/diner/AndresDiner.ttf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'PlayFair';
+  src:
+          local('Monserrat'),
+          url('@/styles/fonts/playfair/PlayfairDisplay.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'PlayFairMedium';
+  src:
+          local('Monserrat'),
+          url('@/styles/fonts/playfair/PlayfairDisplay-Medium.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

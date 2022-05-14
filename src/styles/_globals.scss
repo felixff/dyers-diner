@@ -12,8 +12,8 @@
 }
 
 .fixed {
-  height: 5em;
-  background-color: $primary;
+  height: 5.5em !important;
+  background-color: hsl(347, 49%, 18%, 1) !important;
 }
 
 .transparent {
@@ -70,4 +70,35 @@
 .invalid {
   border: 2px solid crimson;
   animation: shake 0.1s;
+}
+
+.background__images {
+  background-size: cover;
+  background-color: hsla(0,0%,0%, 0.7);
+  background-blend-mode: multiply;
+
+  &-order {
+    background-image: url("@/assets/img/order.jpg");
+    background-position: 0 -300px;
+  }
+
+  &-breakfast {
+    background-image: url("@/assets/img/breakfast.jpg");
+    background-position: 0 -500px;
+  }
+
+  &-lunch {
+    background-image: url("@/assets/img/paninis.jpg");
+    background-position: 0 -300px;
+  }
+
+  &-cakes {
+    background-image: url("@/assets/img/cakes.jpg");
+    background-position: 0 -300px;
+  }
+
+  &-drinks {
+    background-image: url("@/assets/img/hotchocolate.jpg");
+    background-position: 0 -300px;
+  }
 }

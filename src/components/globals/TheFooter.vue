@@ -4,8 +4,8 @@
       <div class="section__footer">
         <div class="title__section-footer">Contact</div>
         <div class="contact__footer">Email: email@dyersdiner.co.uk</div>
-        <div class="contact__footer">Call: 07XXX XXX XXX</div>
-        <div class="contact__footer">Ipswich</div>
+        <div class="contact__footer">Call: <a href="tel:07872184132">07872 184 132</a></div>
+        <div class="contact__footer">Hawthorn Dr, Ipswich IP2 0QY</div>
       </div>
       <div class="section__footer img__centre">
         <img src="@/assets/img/egg.png" alt="Egg model"/>
@@ -51,12 +51,6 @@ export default {
       .section__footer {
         max-width: 30% !important;
 
-        .title__section-footer {
-        }
-
-        .contact__footer {
-        }
-
         &.img__centre {
           height: 10em;
           display: inline !important;
@@ -77,6 +71,7 @@ export default {
 .container__footer {
   height: 100%;
   width: 100%;
+  background-color: $primary;
 
   .content__footer {
     height: 100%;
@@ -100,6 +95,10 @@ export default {
 
       .contact__footer {
         color: $white-brighter;
+
+        & > * {
+          color: $white-brighter;
+        }
 
         .footer__social {
           font-size: 1.5rem;
