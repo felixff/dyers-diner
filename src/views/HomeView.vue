@@ -6,10 +6,10 @@
       </div>
 
       <div class="images" style="display: flex; flex-direction: row">
-        <img src="https://picsum.photos/300/200" alt="Placholder Image">
-        <img src="https://picsum.photos/300/210" alt="Placholder Image">
-        <img src="https://picsum.photos/300/220" alt="Placholder Image">
-        <img src="https://picsum.photos/300/230" alt="Placholder Image">
+        <img src="https://picsum.photos/300/200" alt="Placeholder Image">
+        <img src="https://picsum.photos/300/210" alt="Placeholder Image">
+        <img src="https://picsum.photos/300/220" alt="Placeholder Image">
+        <img src="https://picsum.photos/300/230" alt="Placeholder Image">
       </div>
       <div>
         Animate me
