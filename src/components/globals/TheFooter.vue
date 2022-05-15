@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@media screen and (min-width: 1064px) {
+@media screen and (min-width: 1024px) {
   .container__footer {
     width: 100%;
 

@@ -154,3 +154,14 @@ a {
   font-style: normal;
   font-display: swap;
 }
+
+/* Fonts */
+@font-face {
+  font-family: 'PlayFairRegular';
+  src:
+          local('Monserrat'),
+          url('@/styles/fonts/playfair/PlayfairDisplay-Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

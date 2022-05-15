@@ -1,3 +1,4 @@
+@import "mixins";
 
 .half-screen-height {
   height: $half-screen-height;
@@ -12,8 +13,10 @@
 }
 
 .fixed {
-  height: 5.5em !important;
-  background-color: hsl(347, 49%, 18%, 1) !important;
+  @include lg {
+    height: 5.5em !important;
+    background-color: hsl(347, 49%, 18%, 1) !important;
+  }
 }
 
 .transparent {
@@ -78,27 +81,43 @@
   background-blend-mode: multiply;
 
   &-order {
+    border-top: $primary solid 3px;
     background-image: url("@/assets/img/order.jpg");
-    background-position: 0 -300px;
+
+    @include md {
+      background-position: 0 -300px;
+    }
   }
 
-  &-breakfast {
+  &-hot-food {
     background-image: url("@/assets/img/breakfast.jpg");
-    background-position: 0 -500px;
+
+    @include md {
+      background-position: 0 -500px;
+    }
   }
 
-  &-lunch {
+  &-extras {
     background-image: url("@/assets/img/paninis.jpg");
-    background-position: 0 -300px;
+
+    @include md {
+      background-position: 0 -300px;
+    }
   }
 
-  &-cakes {
+  &-cakes-and-sweets {
     background-image: url("@/assets/img/cakes.jpg");
-    background-position: 0 -300px;
+
+    @include md {
+      background-position: 0 -300px;
+    }
   }
 
   &-drinks {
     background-image: url("@/assets/img/hotchocolate.jpg");
-    background-position: 0 -300px;
+
+    @include md {
+      background-position: 0 -300px;
+    }
   }
 }

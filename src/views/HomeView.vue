@@ -1,15 +1,17 @@
 <template>
   <div class="container__home">
     <div class="hero">
-      <h1 class="main-message">
-        Welcome to Dyer's Diner and Coffee Shack
-      </h1>
-      <h3 class="main-text">
-        &nbsp;Family run diner and coffee shack, in the heart of Ipswich
-      </h3>
-<!--      <div class="main-call-to-action">-->
-<!--        <router-link to="/ordering">Order Now</router-link>-->
-<!--      </div>-->
+      <div class="hero__text">
+        <h1 class="main-message">
+          Welcome to Dyer's Diner and Coffee Shack
+        </h1>
+        <h3 class="main-text">
+          Family run diner and coffee shack, in the heart of Ipswich
+        </h3>
+        <!--      <div class="main-call-to-action">-->
+        <!--        <router-link to="/ordering">Order Now</router-link>-->
+        <!--      </div>-->
+      </div>
     </div>
 
     <div class="container__order">
@@ -17,35 +19,120 @@
         <h2>Order Now</h2>
       </div>
       <div class="section__order">
+        We are pleased to announce that we can now deliver your favourite meals straight to your door
       </div>
     </div>
 
     <div class="container__menu">
-      <div class="section__menu"></div>
-      <div class="section__menu-img background__images background__images-breakfast">
-        <h2>Breakfast Menu</h2>
+      <div class="section__menu">
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+      </div>
+      <div class="section__menu-img background__images background__images-hot-food">
+        <h2>Hot Food</h2>
       </div>
     </div>
 
     <div class="container__menu">
-      <div class="section__menu-img background__images background__images-lunch">
-        <h2>Lunch Menu</h2>
+      <div class="section__menu-img background__images background__images-extras">
+        <h2>Extras</h2>
       </div>
-      <div class="section__menu"></div>
+      <div class="section__menu">
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+      </div>
     </div>
 
     <div class="container__menu">
-      <div class="section__menu"></div>
-      <div class="section__menu-img background__images background__images-cakes">
-        <h2>Cake Selection</h2>
+      <div class="section__menu">
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+      </div>
+      <div class="section__menu-img background__images background__images-cakes-and-sweets">
+        <h2>Cakes & Sweets</h2>
       </div>
     </div>
 
     <div class="container__menu">
       <div class="section__menu-img background__images background__images-drinks">
-        <h2>Drinks Selection</h2>
+        <h2>Drinks</h2>
       </div>
-      <div class="section__menu"></div>
+      <div class="section__menu">
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+        <menu-item
+            item-text="Test test"
+            :item-image="require('@/assets/img/breakfast.jpg')"
+            item-image-title="Test test"/>
+      </div>
     </div>
     <div class="container__about-us">
 
@@ -53,52 +140,16 @@
   </div>
 </template>
 <script>
+import MenuItem from '@/components/elements/MenuItem'
+
 export default {
   name: 'HomeView',
-  components: {}
+  components: {
+    MenuItem
+  }
 }
 </script>
 <style lang="scss" scoped>
-@media screen and (min-width: 1064px) {
-  .container__home {
-    .hero {
-
-    }
-
-    .container__order {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-
-      .section__order {
-        width: $half-screen-width;
-        height: $half-screen-height;
-
-        &-img {
-          width: $half-screen-width;
-          height: $half-screen-height;
-        }
-      }
-    }
-
-    .container__menu {
-      width: 100%;
-      display: flex;
-      flex-direction: row;
-
-      .section__menu {
-        width: $half-screen-width;
-        height: $half-screen-height;
-
-        &-img {
-          width: $half-screen-width;
-          height: $half-screen-height;
-        }
-      }
-    }
-  }
-}
-
 .container__home {
   .hero {
     height: 100vh;
@@ -108,26 +159,47 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 40px;
 
-    .main-message{
-      font-family: AndresDiner, serif;
-      font-weight: 300;
-      font-size: 2.5rem;
-      color: $white-calmer;
-    }
 
-    .main-text {
-      font-family: Montserrat, sans-serif;
-      color: $white-calmer;
-    }
+    .hero__text {
+      width: 100%;
+      padding: 40px;
+      transform: translateY(10%);
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+      align-items: flex-start;
+      justify-content: center;
 
-    .main-call-to-action {
-      font-family: Raleway, serif;
-      color: $white-calmer;
+      @include lg {
+        transform: translateY(0);
+        gap: 0.5em;
+      }
+
+      .main-message{
+        font-family: PlayFairMedium, serif;
+        font-weight: bold;
+        font-size: 2.5rem;
+        color: $white-calmer;
+
+        @include lg {
+          font-size: 4rem;
+        }
+      }
+
+      .main-text {
+        font-family: PlayFairRegular, sans-serif;
+        color: $white-calmer;
+
+        @include lg {
+          font-size: 1.5rem;
+        }
+      }
+
+      .main-call-to-action {
+        font-family: Raleway, serif;
+        color: $white-calmer;
+      }
     }
   }
 
@@ -135,13 +207,26 @@ export default {
     width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+
+    @include lg {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
 
     .section__order {
-      width: $full-screen-width;
+      width: 100%;
       height: $half-screen-height;
 
+      @include lg {
+        width: $half-screen-width;
+        height: $half-screen-height;
+      }
+
       &-img {
-        width: $full-screen-width;
+        width: 100%;
         height: $half-screen-height;
         display: flex;
         justify-content: center;
@@ -150,8 +235,14 @@ export default {
         font-size: 1.5rem;
         color: $white-calmer;
 
+        @include lg {
+          width: $half-screen-width;
+          height: $half-screen-height;
+          font-size: 3rem;
+        }
+
         h2 {
-          font-family: AndresDiner, serif;
+          font-family: PlayFairRegular, serif;
         }
       }
     }
@@ -160,14 +251,40 @@ export default {
   .container__menu {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    &:nth-child(odd) {
+      flex-direction: column-reverse!important;
+
+      @include lg {
+        flex-direction: row !important;
+      }
+    }
+
+    @include lg {
+      width: 100%;
+      display: flex;
+      flex-direction: row !important;
+    }
 
     .section__menu {
-      width: $full-screen-width;
-      height: $half-screen-height;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1em;
+      padding: 1em;
+
+      @include lg {
+        width: $half-screen-width;
+        height: $half-screen-height;
+      }
 
       &-img {
-        width: $full-screen-width;
+        width: 100%;
         height: $half-screen-height;
         display: flex;
         justify-content: center;
@@ -175,9 +292,17 @@ export default {
         text-align: center;
         font-size: 1.5rem;
         color: $white-calmer;
+        padding: 10px;
+
+        @include lg {
+          width: $half-screen-width;
+          height: $half-screen-height;
+          font-size: 3rem;
+
+        }
 
         h2 {
-          font-family: AndresDiner, serif;
+          font-family: PlayFairRegular, serif;
         }
       }
     }
