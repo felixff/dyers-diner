@@ -135,7 +135,7 @@
       </div>
     </div>
     <div class="container__about-us">
-
+      <h2>Timeline</h2>
     </div>
   </div>
 </template>
@@ -219,6 +219,11 @@ export default {
     .section__order {
       width: 100%;
       height: $half-screen-height;
+      font-family: PlayFairRegular, serif;
+      font-size: 2rem;
+      color: $black;
+      text-align: left;
+      padding: 1em;
 
       @include lg {
         width: $half-screen-width;
@@ -238,7 +243,7 @@ export default {
         @include lg {
           width: $half-screen-width;
           height: $half-screen-height;
-          font-size: 3rem;
+          font-size: 2.8rem;
         }
 
         h2 {
@@ -297,7 +302,7 @@ export default {
         @include lg {
           width: $half-screen-width;
           height: $half-screen-height;
-          font-size: 3rem;
+          font-size: 2.8rem;
 
         }
 

@@ -40,8 +40,8 @@ export default {
   overflow: hidden;
 
   @include lg {
-    width: 24%;
-    height: 15em;
+    width: 23%;
+    height: 12em;
   }
 
   .img__menu-item {
@@ -55,7 +55,7 @@ export default {
     color: $primary-lighter;
     font-family: PlayFairRegular, serif;
     font-weight: bolder;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 5px;
   }
 
