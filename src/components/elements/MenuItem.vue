@@ -35,12 +35,17 @@ export default {
   flex-direction: column;
   width: 100%;
   height: 18em;
-  border: $primary-lighter 2px solid;
+  border: $primary-lighter 1px solid;
   border-radius: 4px;
   overflow: hidden;
 
+  @include sm {
+    width: 48%;
+  }
+
   @include lg {
-    width: 23%;
+    min-width: 23%;
+    width: 13em;
     height: 12em;
   }
 

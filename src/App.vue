@@ -79,9 +79,11 @@ export default {
   position: absolute;
   width: 12em;
   z-index: 0;
-  top: 0;
+  right: 0;
   left: 0;
-  transform: translate(50%, 50%);
+  text-align: center;
+  margin-inline: auto;
+  transform: translateY(50%);
 
   @include lg {
     display: none;

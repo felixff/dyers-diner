@@ -3,7 +3,7 @@
     <div class="hero">
       <div class="hero__text">
         <h1 class="main-message">
-          Welcome to Dyer's Diner and Coffee Shack
+          Welcome to Dyer's Diner and Coffee Shop
         </h1>
         <h3 class="main-text">
           Family run diner and coffee shack, in the heart of Ipswich
@@ -19,7 +19,11 @@
         <h2>Order Now</h2>
       </div>
       <div class="section__order">
-        We are pleased to announce that we can now deliver your favourite meals straight to your door
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
       </div>
     </div>
 
@@ -154,7 +158,7 @@ export default {
   .hero {
     height: 100vh;
     background-image: url("@/assets/img/hero-medium.jpg");
-    background-color: hsla(0,0%,0%, 0.7);
+    background-color: hsla(0, 0%, 0%, 0.7);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
@@ -176,14 +180,14 @@ export default {
         gap: 0.5em;
       }
 
-      .main-message{
+      .main-message {
         font-family: PlayFairMedium, serif;
         font-weight: bold;
         font-size: 2.5rem;
         color: $white-calmer;
 
         @include lg {
-          font-size: 4rem;
+          font-size: 3.5rem;
         }
       }
 
@@ -192,7 +196,7 @@ export default {
         color: $white-calmer;
 
         @include lg {
-          font-size: 1.5rem;
+          font-size: 1.2rem;
         }
       }
 
@@ -224,10 +228,13 @@ export default {
       color: $black;
       text-align: left;
       padding: 1em;
+      display: flex;
 
       @include lg {
         width: $half-screen-width;
         height: $half-screen-height;
+        text-align: left;
+        align-items: center;
       }
 
       &-img {
@@ -243,7 +250,7 @@ export default {
         @include lg {
           width: $half-screen-width;
           height: $half-screen-height;
-          font-size: 2.8rem;
+          font-size: 2rem;
         }
 
         h2 {
@@ -259,7 +266,7 @@ export default {
     flex-direction: column;
 
     &:nth-child(odd) {
-      flex-direction: column-reverse!important;
+      flex-direction: column-reverse !important;
 
       @include lg {
         flex-direction: row !important;
@@ -302,7 +309,7 @@ export default {
         @include lg {
           width: $half-screen-width;
           height: $half-screen-height;
-          font-size: 2.8rem;
+          font-size: 2.2rem;
 
         }
 
@@ -317,6 +324,13 @@ export default {
     width: 100%;
     height: $half-screen-height;
     background-color: $primary;
+
+    h2 {
+      font-size: 2.3rem;
+      color: $white-calmer;
+      font-family: PlayFairMedium, serif;
+      padding: 20px;
+    }
   }
 }
 </style>

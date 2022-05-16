@@ -39,9 +39,9 @@
           <i class="fas fa-times close"></i>
         </div>
         <router-link to="/" @click="changeNavbarState(true)">Home</router-link>
-        <router-link to="/menu" @click="changeNavbarState(true)">Menu</router-link>
-        <router-link to="/about" @click="changeNavbarState(true)">About</router-link>
-        <router-link to="/contact" @click="changeNavbarState(true)">Contact</router-link>
+        <router-link to="/menu" @click="changeNavbarState(true)" class="disabled">Menu</router-link>
+        <router-link to="/about" @click="changeNavbarState(true)" class="disabled">About</router-link>
+        <router-link to="/contact" @click="changeNavbarState(true)" class="disabled">Contact</router-link>
       </nav>
     </div>
   </div>
@@ -102,6 +102,7 @@ export default {
       gap: 2em;
       flex-direction: row;
       padding-inline: 10px;
+      padding: 3px;
     }
 
     .contact-details__top {
@@ -124,7 +125,7 @@ export default {
         @include lg {
           justify-content: center;
           gap: 0.5em;
-          font-size: 1rem;
+          font-size: 0.8rem;
           color: $white-brighter;
         }
       }
@@ -144,7 +145,7 @@ export default {
         color: $white-brighter;
 
         @include lg {
-          font-size: 1.3rem;
+          font-size: 1.1rem;
         }
       }
     }
@@ -250,9 +251,11 @@ export default {
         text-align: center;
         padding: 30px;
         align-items: flex-start !important;
+      }
 
-        &.raised {
-          padding-top: 15px !important;
+      &.raised {
+        @include lg {
+          padding-top: 25px !important;
         }
       }
 
@@ -262,7 +265,7 @@ export default {
           position: absolute;
           width: 90%;
           border-bottom: $secondary-inverted 1px solid;
-          transform: translateY(40px);
+          transform: translateY(30px);
         }
       }
 
@@ -272,7 +275,7 @@ export default {
         font-size: 1.5rem;
 
         @include lg {
-          //font-size: 1.2rem !important;
+          font-size: 1.2rem !important;
         }
 
         &:hover {
