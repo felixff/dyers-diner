@@ -29,26 +29,28 @@
 
     <div class="container__menu">
       <div class="section__menu">
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/breakfast.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/breakfast.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/breakfast.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/breakfast.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/breakfast.png')"
-            item-image-title="Menu Item"/>
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/breakfast.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/breakfast.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/breakfast.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/breakfast.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/breakfast.png')"
+              item-image-title="Menu Item"/>
+        </div>
       </div>
       <div class="section__menu-img background__images background__images-hot-food">
         <h2>Hot Food</h2>
@@ -60,51 +62,55 @@
         <h2>Extras</h2>
       </div>
       <div class="section__menu">
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/panini.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/panini.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/panini.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/panini.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/panini.png')"
-            item-image-title="Menu Item"/>
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
+        </div>
       </div>
     </div>
 
     <div class="container__menu">
       <div class="section__menu">
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/cakes.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/cakes.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/cakes.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/cakes.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/cakes.png')"
-            item-image-title="Menu Item"/>
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+        </div>
       </div>
       <div class="section__menu-img background__images background__images-cakes-and-sweets">
         <h2>Cakes & Sweets</h2>
@@ -116,26 +122,28 @@
         <h2>Drinks</h2>
       </div>
       <div class="section__menu">
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/drink.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/drink.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/drink.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/drink.png')"
-            item-image-title="Menu Item"/>
-        <menu-item
-            item-text="Menu Item"
-            :item-image="require('@/assets/img/drink.png')"
-            item-image-title="Menu Item"/>
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+        </div>
       </div>
     </div>
     <div class="container__about-us">
@@ -215,6 +223,7 @@ export default {
 
     @include lg {
       width: 100%;
+      min-height: 460px;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -222,7 +231,7 @@ export default {
 
     .section__order {
       width: 100%;
-      height: $half-screen-height;
+      height: 100%;
       font-family: PlayFairRegular, serif;
       font-size: 2rem;
       color: $black;
@@ -232,14 +241,13 @@ export default {
 
       @include lg {
         width: $half-screen-width;
-        height: $half-screen-height;
         text-align: left;
         align-items: center;
       }
 
       &-img {
         width: 100%;
-        height: $half-screen-height;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -249,8 +257,8 @@ export default {
 
         @include lg {
           width: $half-screen-width;
-          height: $half-screen-height;
           font-size: 2rem;
+          height: 100%;
         }
 
         h2 {
@@ -262,6 +270,7 @@ export default {
 
   .container__menu {
     width: 100%;
+    min-height: 460px;
     display: flex;
     flex-direction: column;
 
@@ -292,12 +301,12 @@ export default {
 
       @include lg {
         width: $half-screen-width;
-        height: $half-screen-height;
+        min-height: 460px;
       }
 
       &-img {
         width: 100%;
-        height: $half-screen-height;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -310,12 +319,22 @@ export default {
           width: $half-screen-width;
           height: $half-screen-height;
           font-size: 2.2rem;
-
+          min-height: 460px;
         }
 
         h2 {
           font-family: PlayFairRegular, serif;
         }
+      }
+
+      .container__menu-items {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
       }
     }
   }
