@@ -30,25 +30,25 @@
     <div class="container__menu">
       <div class="section__menu">
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/breakfast.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/breakfast.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/breakfast.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/breakfast.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/breakfast.png')"
+            item-image-title="Menu Item"/>
       </div>
       <div class="section__menu-img background__images background__images-hot-food">
         <h2>Hot Food</h2>
@@ -61,50 +61,50 @@
       </div>
       <div class="section__menu">
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/panini.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/panini.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/panini.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/panini.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/panini.png')"
+            item-image-title="Menu Item"/>
       </div>
     </div>
 
     <div class="container__menu">
       <div class="section__menu">
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/cakes.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/cakes.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/cakes.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/cakes.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/cakes.png')"
+            item-image-title="Menu Item"/>
       </div>
       <div class="section__menu-img background__images background__images-cakes-and-sweets">
         <h2>Cakes & Sweets</h2>
@@ -117,25 +117,25 @@
       </div>
       <div class="section__menu">
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/drink.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/drink.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/drink.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/drink.png')"
+            item-image-title="Menu Item"/>
         <menu-item
-            item-text="Test test"
-            :item-image="require('@/assets/img/breakfast.jpg')"
-            item-image-title="Test test"/>
+            item-text="Menu Item"
+            :item-image="require('@/assets/img/drink.png')"
+            item-image-title="Menu Item"/>
       </div>
     </div>
     <div class="container__about-us">
