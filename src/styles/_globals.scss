@@ -77,7 +77,7 @@
 
 .background__images {
   background-size: cover;
-  background-color: hsla(0,0%,0%, 0.7);
+  background-color: hsla(0, 0%, 0%, 0.7);
   background-blend-mode: multiply;
 
   &-order {
@@ -124,10 +124,23 @@
 
 .has-step-orange::after {
   background: $secondary !important;
+
+
 }
 
-.time {
+li {
+  &:last-child {
+    display: none!important;
+  }
+}
+
+.cardBackground {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  background-image: url("@/assets/img/order.jpg")!important;
+  background-size: cover !important;
+  background-color: hsla(1, 2%, 61%, 1) !important;
+  background-blend-mode: multiply !important;
+  color: $white-brighter !important;
 }

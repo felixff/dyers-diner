@@ -15,16 +15,17 @@
       </div>
     </div>
 
-    <div class="container__order">
-      <div class="section__order-img background__images background__images-order">
+    <div class="container__menu">
+      <div class="section__menu-img background__images background__images-order">
         <h2>Order Now</h2>
       </div>
-      <div class="section__order">
+      <div class="section__menu order-text">
         <div class="content__order">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est
           laborum.
         </div>
       </div>
@@ -169,7 +170,8 @@
 import MenuItem from '@/components/elements/MenuItem'
 import MainLogo from '@/components/elements/MainLogo'
 
-import { defineAsyncComponent } from 'vue';
+import {defineAsyncComponent} from 'vue';
+
 const Timeline = defineAsyncComponent(() =>
     import('@/components/elements/TimelineComponent')
 )
@@ -183,8 +185,7 @@ export default {
     Timeline,
   },
   data() {
-    return {
-    }
+    return {}
   }
 }
 </script>
@@ -277,38 +278,6 @@ export default {
       text-align: left;
       padding: 1em;
       display: flex;
-
-      @include lg {
-        width: $half-screen-width;
-        text-align: left;
-        align-items: center;
-        flex-grow: 1;
-      }
-
-      .content__order {
-        height: 100%;
-      }
-
-      &-img {
-        width: 100%;
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 1.5rem;
-        color: $white-brighter;
-
-        @include lg {
-          width: $half-screen-width;
-          font-size: 2rem;
-          height: 100%;
-        }
-
-        h2 {
-          font-family: PlayFairRegular, serif;
-        }
-      }
     }
   }
 
@@ -347,6 +316,24 @@ export default {
       padding: 1em;
       background-color: $primary;
 
+      .content__order {
+        height: 100%;
+        color: $white-brighter;
+        padding: 10px;
+        @include lg {
+          font-family: PlayFairRegular, serif;
+          font-size: 2rem;
+          color: $black;
+          text-align: left;
+        }
+      }
+
+      &.order-text {
+        @include md {
+          height: 100% !important;
+        }
+      }
+
       @include md {
         height: 40px;
       }
@@ -375,7 +362,7 @@ export default {
 
         @include lg {
           width: $half-screen-width;
-          font-size: 2.2rem;
+          font-size: 2.1rem;
           min-height: 460px;
         }
 
@@ -406,28 +393,37 @@ export default {
   .container__section-about-us {
     width: 100%;
     background-color: $primary;
-    height: 50em;
     display: flex;
     align-items: center;
     flex-direction: column;
 
-    h2 {
-      align-self: flex-start;
-      font-size: 2.3rem;
-      color: $white-calmer;
-      font-family: PlayFairMedium, serif;
-      padding: 20px;
-    }
-
     .title__about-us {
       font-family: PlayFairRegular, serif;
-      font-size: 2rem;
-      color: $white-calmer;
+      font-size: 2.3rem;
+      color: $white-brighter;
+      padding: 20px;
+      margin-bottom: 3em;
+
+      @include md {
+        font-size: 3.3rem;
+      }
     }
 
     .content__about-us {
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: $white-calmer;
+      padding: 20px;
+      text-align: left;
+      margin-bottom: 2em;
+      @include md {
+        max-width: 80%;
+        margin-inline: auto;
+        padding: 10px;
+      }
+
+      @include lg {
+        max-width: 60%;
+      }
     }
   }
 }

@@ -28,36 +28,43 @@ export default {
           title: "2016",
           content: "Started out with first coffee van",
           stepCssClass: 'has-step-orange',
+          boxCssClass: 'cardBackground',
         },
         {
           title: "2017",
           content: "Upgraded to coffee and food van",
           stepCssClass: 'has-step-orange',
+          boxCssClass: 'cardBackground',
         },
         {
           title: "2020",
           content: "Upgraded to a bigger van and expanded the menu",
           stepCssClass: 'has-step-orange',
+          boxCssClass: 'cardBackground',
         },
         {
           title: "2021",
           content: "The van burned down in a fire and everything was lost",
           stepCssClass: 'has-step-orange',
+          boxCssClass: 'cardBackground',
         },
         {
           title: "2021",
           content: "Managed to get a new van and relaunched the business",
           stepCssClass: 'has-step-orange',
+          boxCssClass: 'cardBackground',
         },
         {
           title: "2022",
           content: "Opened the Chantry Library Cafe with the community's help",
           stepCssClass: 'has-step-orange',
+          boxCssClass: 'cardBackground',
         },
         {
           title: "2022",
           content: "New website",
           stepCssClass: 'has-step-orange',
+          boxCssClass: 'cardBackground',
         }
       ]
     }
@@ -69,5 +76,22 @@ export default {
 <style lang="scss" scoped>
 .timeline {
   width: 100%;
+  display: none;
+  padding: 40px!important;
+  .vue-horizontal-timeline {
+    box-shadow: none!important;
+
+    @include rwd(1446) {
+      transform: translateX(-3.5%);
+      padding: 20px!important;
+    }
+
+    .timeline {
+      align-self: center!important;
+    }
+  }
+  @include md {
+    display: block;
+  }
 }
 </style>
