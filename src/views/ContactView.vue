@@ -1,10 +1,18 @@
 <template>
-<div class="container__menu"></div>
+<div class="container__menu">
+  <main-logo/>
+</div>
 </template>
 
 <script>
+import MainLogo from '@/components/elements/MainLogo'
+
 export default {
-  name: "ContactView"
+  name: "ContactView",
+  components: {
+    MainLogo
+  }
+
 }
 </script>
 

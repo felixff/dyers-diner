@@ -1,12 +1,13 @@
 <template>
   <div class="container__home">
     <div class="hero">
+      <main-logo/>
       <div class="hero__text">
         <h1 class="main-message">
           Welcome to Dyer's Diner and Coffee Shop
         </h1>
         <h3 class="main-text">
-          Family run diner and coffee shack, in the heart of Ipswich
+          We don't serve fast food! We serve good food as fast as we can!
         </h3>
         <!--      <div class="main-call-to-action">-->
         <!--        <router-link to="/ordering">Order Now</router-link>-->
@@ -19,11 +20,13 @@
         <h2>Order Now</h2>
       </div>
       <div class="section__order">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
+        <div class="content__order">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </div>
       </div>
     </div>
 
@@ -146,18 +149,37 @@
         </div>
       </div>
     </div>
-    <div class="container__about-us">
-      <h2>Timeline</h2>
+    <div class="container__section-about-us">
+      <h1 class="title__about-us">
+        About Us
+      </h1>
+      <div class="content__about-us">
+        We have been established in 2016 and have grown as a business year on year. What started out as something to do
+        after being made redundant from my last job has turned into my life and I love it. I work so hard day after day
+        to offer the best service and to stand above the rest. We have worked alongside Little mix and we take part in
+        carnivals, car shows and all sorts of other events. The year 2022 has started amazingly and now we also have a
+        cafe in the back of Chantry Library. Our little cafe has become very popular within the Chantry community. We
+        welcome people of all walks of the earth, so eat some good food and have a good time.
+      </div>
+      <timeline/>
     </div>
   </div>
 </template>
 <script>
 import MenuItem from '@/components/elements/MenuItem'
+import MainLogo from '@/components/elements/MainLogo'
+import Timeline from "@/components/elements/TimelineComponent";
 
 export default {
   name: 'HomeView',
   components: {
-    MenuItem
+    MenuItem,
+    MainLogo,
+    Timeline,
+  },
+  data() {
+    return {
+    }
   }
 }
 </script>
@@ -171,7 +193,15 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
 
+    @include underXss {
+      height: 100%;
+      padding-bottom: 20px;
+    }
 
     .hero__text {
       width: 100%;
@@ -180,10 +210,10 @@ export default {
       display: flex;
       flex-direction: column;
       gap: 2em;
-      align-items: flex-start;
       justify-content: center;
 
       @include lg {
+        align-items: center;
         transform: translateY(0);
         gap: 0.5em;
       }
@@ -204,7 +234,8 @@ export default {
         color: $white-calmer;
 
         @include lg {
-          font-size: 1.2rem;
+          font-size: 1.3rem;
+          align-self: center;
         }
       }
 
@@ -217,9 +248,12 @@ export default {
 
   .container__order {
     width: 100%;
+    min-height: 460px;
+    height: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     @include lg {
       width: 100%;
@@ -243,11 +277,16 @@ export default {
         width: $half-screen-width;
         text-align: left;
         align-items: center;
+        flex-grow: 1;
+      }
+
+      .content__order {
+        height: 100%;
       }
 
       &-img {
         width: 100%;
-        height: 100%;
+        height: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -270,7 +309,6 @@ export default {
 
   .container__menu {
     width: 100%;
-    min-height: 460px;
     display: flex;
     flex-direction: column;
 
@@ -280,6 +318,10 @@ export default {
       @include lg {
         flex-direction: row !important;
       }
+    }
+
+    @include md {
+      min-height: 390px;
     }
 
     @include lg {
@@ -298,15 +340,22 @@ export default {
       align-items: center;
       gap: 1em;
       padding: 1em;
+      background-color: $primary;
+
+      @include md {
+        height: 40px;
+      }
 
       @include lg {
         width: $half-screen-width;
+        background-color: inherit;
         min-height: 460px;
+        height: 100%;
       }
 
       &-img {
         width: 100%;
-        height: 100%;
+        min-height: 200px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -315,9 +364,12 @@ export default {
         color: $white-calmer;
         padding: 10px;
 
+        @include md {
+          min-height: 350px;
+        }
+
         @include lg {
           width: $half-screen-width;
-          height: $half-screen-height;
           font-size: 2.2rem;
           min-height: 460px;
         }
@@ -329,26 +381,48 @@ export default {
 
       .container__menu-items {
         height: 100%;
-        display: flex;
+        display: none;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
         align-items: center;
+        justify-self: center;
+        align-self: center;
         gap: 1em;
+
+        @include lg {
+          display: flex;
+          margin-inline: auto;
+          justify-content: space-around;
+        }
       }
     }
   }
 
-  .container__about-us {
+  .container__section-about-us {
     width: 100%;
-    height: $half-screen-height;
     background-color: $primary;
+    height: 50em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     h2 {
+      align-self: flex-start;
       font-size: 2.3rem;
       color: $white-calmer;
       font-family: PlayFairMedium, serif;
       padding: 20px;
+    }
+
+    .title__about-us {
+      font-family: PlayFairRegular, serif;
+      font-size: 2rem;
+      color: $white-calmer;
+    }
+
+    .content__about-us {
+      font-size: 1rem;
+      color: $white-calmer;
     }
   }
 }

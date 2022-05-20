@@ -37,37 +37,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@media screen and (min-width: 1024px) {
-  .container__footer {
-    width: 100%;
-
-    .content__footer {
-      margin-inline: auto;
-      height: 100%;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      gap: 10em !important;
-
-      .section__footer {
-        max-width: 30% !important;
-
-        &.img__centre {
-          height: 10em;
-          display: inline !important;
-
-          img {
-            height: 100%;
-          }
-        }
-      }
-    }
-
-    .copyright {
-      width: 80% !important;
-    }
-  }
-}
-
 .container__footer {
   height: 100%;
   width: 100%;
@@ -83,9 +52,18 @@ export default {
     padding: 10px;
     margin-bottom: 1em;
 
-    .section__footer {
-      max-width: 50%;
+    @include lg {
+      margin-inline: auto;
+      height: 100%;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 10em !important;
+    }
 
+    .section__footer {
+      @include lg {
+        max-width: 30% !important;
+      }
       .title__section-footer {
         color: $white-brighter;
         font-size: 1.4rem;
@@ -107,6 +85,17 @@ export default {
 
       &.img__centre {
         display: none;
+
+        @include lg {
+          height: 10em;
+          display: inline !important;
+        }
+
+        img {
+          @include lg {
+            height: 100%;
+          }
+        }
       }
 
       .socials__footer {
@@ -132,6 +121,10 @@ export default {
     border-top: groove 1px $white-brighter;
     padding: 2px;
     font-size: 14px;
+
+    @include lg {
+      width: 80% !important;
+    }
   }
 }
 </style>

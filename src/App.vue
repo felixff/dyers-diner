@@ -1,8 +1,5 @@
 <template>
   <the-navbar/>
-  <div class="logo-app">
-    <img src="@/assets/logo.webp" alt="Dyer's Diner Logo">
-  </div>
   <router-view/>
   <div class="container__map">
     <iframe
@@ -72,22 +69,11 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
+  zoom: 0;
 
-.logo-app {
-  display: block;
-  position: absolute;
-  width: 12em;
-  z-index: 0;
-  right: 0;
-  left: 0;
-  text-align: center;
-  margin-inline: auto;
-  transform: translateY(50%);
-
-  @include lg {
-    display: none;
-  }
+  //@include rwd(2400) {
+  //  zoom: 2;
+  //}
 }
 
 .container__map {
