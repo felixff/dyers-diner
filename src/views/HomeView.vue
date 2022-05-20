@@ -168,7 +168,12 @@
 <script>
 import MenuItem from '@/components/elements/MenuItem'
 import MainLogo from '@/components/elements/MainLogo'
-import Timeline from "@/components/elements/TimelineComponent";
+
+import { defineAsyncComponent } from 'vue';
+const Timeline = defineAsyncComponent(() =>
+    import('@/components/elements/TimelineComponent')
+)
+
 
 export default {
   name: 'HomeView',
@@ -222,7 +227,7 @@ export default {
         font-family: PlayFairMedium, serif;
         font-weight: bold;
         font-size: 2.5rem;
-        color: $white-calmer;
+        color: $white-brighter;
 
         @include lg {
           font-size: 3.5rem;
@@ -231,7 +236,7 @@ export default {
 
       .main-text {
         font-family: PlayFairRegular, sans-serif;
-        color: $white-calmer;
+        color: $white-brighter;
 
         @include lg {
           font-size: 1.3rem;
@@ -241,7 +246,7 @@ export default {
 
       .main-call-to-action {
         font-family: Raleway, serif;
-        color: $white-calmer;
+        color: $white-brighter;
       }
     }
   }
@@ -292,7 +297,7 @@ export default {
         align-items: center;
         text-align: center;
         font-size: 1.5rem;
-        color: $white-calmer;
+        color: $white-brighter;
 
         @include lg {
           width: $half-screen-width;
@@ -361,7 +366,7 @@ export default {
         align-items: center;
         text-align: center;
         font-size: 1.5rem;
-        color: $white-calmer;
+        color: $white-brighter;
         padding: 10px;
 
         @include md {
