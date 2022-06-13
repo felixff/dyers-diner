@@ -1,0 +1,706 @@
+[
+  {
+    "productCode": 1,
+    "productName": "All Day Breakfast",
+    "productDescription": "2 sausages, 2 bacon, 2 hashbrowns, 1 egg, beans, mushrooms and a slice of toast",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "6.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 2,
+    "productName": "Small Breakfast",
+    "productDescription": "1 sausage, 1 bacon, 1 egg, beans and a slice of toast",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "4.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 3,
+    "productName": "Vegetarian Breakfast",
+    "productDescription": "2 eggs, 2 hashbrowns, beans, mushrooms and a slice of toast",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "4.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 4,
+    "productName": "Breakfast Wrap",
+    "productDescription": "2 sausages, 2 bacon, 1 egg, 1 hashbrown with cheese and sauce",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "4.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 5,
+    "productName": "Sausage Bap",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 6,
+    "productName": "Bacon Roll",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 7,
+    "productName": "Bacon and Egg Roll",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "3.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Sausage, Bacon and Egg Roll",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "4.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Egg on Toast",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "1.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Toast and Jam",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "1.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Jacket Potatoe With Cheese",
+    "productDescription": "served with side salad",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Jacket Potatoe With Beans",
+    "productDescription": "served with side salad",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Jacket Potatoe With Cheese and Beans",
+    "productDescription": "served with side salad",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "3.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Jacket Potatoe With Tuna",
+    "productDescription": "served with side salad",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "3.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Cheese Toastie",
+    "productDescription": "",
+    "productCategory": "Light Bites and Little Extras",
+    "price": {
+      "regular": "2.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Cheese and Beans Toastie",
+    "productDescription": "",
+    "productCategory": "Light Bites and Little Extras",
+    "price": {
+      "regular": "2.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Cheese and Onion Toastie",
+    "productDescription": "",
+    "productCategory": "Light Bites and Little Extras",
+    "price": {
+      "regular": "2.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Cheese and ???? Panini",
+    "productDescription": "served with side salad",
+    "productCategory": "Light Bites and Little Extras",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Cheese and Chutney Panini",
+    "productDescription": "served with side salad",
+    "productCategory": "Light Bites and Little Extras",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Pizza Slice",
+    "productDescription": "",
+    "productCategory": "Light Bites and Little Extras",
+    "price": {
+      "regular": "1.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Sausage Roll",
+    "productDescription": "",
+    "productCategory": "Light Bites and Little Extras",
+    "price": {
+      "regular": "1.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Slices ??????????",
+    "productDescription": "",
+    "productCategory": "Light Bites and Little Extras",
+    "price": {
+      "regular": "1.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Scones (Plain)",
+    "productDescription": "served with butter and Jam",
+    "productCategory": "Something Sweet",
+    "price": {
+      "regular": "2.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Scones (Fruity)",
+    "productDescription": "served with butter and Jam",
+    "productCategory": "Something Sweet",
+    "price": {
+      "regular": "2.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Scones (??????)",
+    "productDescription": "served with butter and Jam",
+    "productCategory": "Something Sweet",
+    "price": {
+      "regular": "2.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Cream Tea",
+    "productDescription": "",
+    "productCategory": "Something Sweet",
+    "price": {
+      "regular": "4.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Croissants",
+    "productDescription": "served with butter and Jam",
+    "productCategory": "Something Sweet",
+    "price": {
+      "regular": "1.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Toasted Tea Cakes",
+    "productDescription": "served with butter",
+    "productCategory": "Something Sweet",
+    "price": {
+      "regular": "1.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Slice of Cake",
+    "productDescription": "",
+    "productCategory": "Something Sweet",
+    "price": {
+      "regular": "1.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Chocolate Brownie",
+    "productDescription": "",
+    "productCategory": "Something Sweet",
+    "price": {
+      "regular": "1.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Espresso",
+    "productDescription": "",
+    "productCategory": "Coffee",
+    "price": {
+      "regular": "2.00",
+      "medium": null,
+      "large": 2.50
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Latte",
+    "productDescription": "",
+    "productCategory": "Coffee",
+    "price": {
+      "regular": "2.50",
+      "medium": null,
+      "large": 3.00
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Cappuccino",
+    "productDescription": "",
+    "productCategory": "Coffee",
+    "price": {
+      "regular": "2.50",
+      "medium": null,
+      "large": 3.00
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Flat White",
+    "productDescription": "",
+    "productCategory": "Coffee",
+    "price": {
+      "regular": "2.50",
+      "medium": null,
+      "large": 3.00
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Americano",
+    "productDescription": "",
+    "productCategory": "Coffee",
+    "price": {
+      "regular": "2.20",
+      "medium": null,
+      "large": 2.70
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Mocha",
+    "productDescription": "",
+    "productCategory": "Coffee",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": 3.50
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Tea",
+    "productDescription": "",
+    "productCategory": "Coffee",
+    "price": {
+      "regular": "1.00",
+      "medium": null,
+      "large": 1.50
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Hot Chocolate",
+    "productDescription": "",
+    "productCategory": "Hot Chocolate",
+    "price": {
+      "regular": "2.50",
+      "medium": null,
+      "large": 3.00
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "White Hot Chocolate",
+    "productDescription": "",
+    "productCategory": "Hot Chocolate",
+    "price": {
+      "regular": "2.50",
+      "medium": null,
+      "large": 3.00
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "White Mocha",
+    "productDescription": "",
+    "productCategory": "Hot Chocolate",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": 3.50
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Lemon Meringue",
+    "productDescription": "",
+    "productCategory": "Hot Chocolate",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": 3.50
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Chocolate Orange",
+    "productDescription": "",
+    "productCategory": "Hot Chocolate",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": 3.50
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Winter Spice",
+    "productDescription": "",
+    "productCategory": "Hot Chocolate",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": 3.50
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Black Forest",
+    "productDescription": "",
+    "productCategory": "Hot Chocolate",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": 3.50
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Crunchy",
+    "productDescription": "",
+    "productCategory": "Hot Chocolate",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": 3.50
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Bueno",
+    "productDescription": "",
+    "productCategory": "Hot Chocolate",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": 3.50
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Chocolate Mountain",
+    "productDescription": "",
+    "productCategory": "Hot Chocolate",
+    "price": {
+      "regular": "3.50",
+      "medium": null,
+      "large": 4.00
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "White Maple",
+    "productDescription": "",
+    "productCategory": "Hot Chocolate",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": 3.50
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Maple",
+    "productDescription": "",
+    "productCategory": "Hot Chocolate",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": 3.50
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Vanilla",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "2.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Chocolate",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "2.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Banana",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "2.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Strawberry",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "2.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Chocolate Orange",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Strawberry Forest",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Peanut Butter",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Mint Chocolate",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Vanilla Banana",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Banana Strawberry",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Bountyfull",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Vanilla Fudge",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Black Forest",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Oreo",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Smarties",
+    "productDescription": "",
+    "productCategory": "Thick Milkshakes",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  }
+]

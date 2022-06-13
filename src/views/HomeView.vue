@@ -21,12 +21,7 @@
       </div>
       <div class="section__menu order-text">
         <div class="content__order">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est
-          laborum.
+          Please provide text for advertising your ordering service. Things like time / fee / areas you cover.
         </div>
       </div>
     </div>
@@ -63,7 +58,7 @@
 
     <div class="container__menu">
       <div class="section__menu-img background__images background__images-extras">
-        <h2>Extras</h2>
+        <h2>Lite Bites & Little Extras</h2>
       </div>
       <div class="section__menu">
         <div class="container__menu-items">
@@ -117,13 +112,13 @@
         </div>
       </div>
       <div class="section__menu-img background__images background__images-cakes-and-sweets">
-        <h2>Cakes & Sweets</h2>
+        <h2>Something Sweet</h2>
       </div>
     </div>
 
     <div class="container__menu">
       <div class="section__menu-img background__images background__images-drinks">
-        <h2>Drinks</h2>
+        <h2>Coffee</h2>
       </div>
       <div class="section__menu">
         <div class="container__menu-items">
@@ -150,6 +145,127 @@
         </div>
       </div>
     </div>
+
+    <div class="container__menu">
+      <div class="section__menu">
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+        </div>
+      </div>
+      <div class="section__menu-img background__images background__images-cakes-and-sweets">
+        <h2>Hot Chocolate</h2>
+      </div>
+    </div>
+
+    <div class="container__menu">
+      <div class="section__menu-img background__images background__images-drinks">
+        <h2>Cold Drink</h2>
+      </div>
+      <div class="section__menu">
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="container__menu">
+      <div class="section__menu">
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+        </div>
+      </div>
+      <div class="section__menu-img background__images background__images-cakes-and-sweets">
+        <h2>Frappes</h2>
+      </div>
+    </div>
+
+    <div class="container__menu">
+      <div class="section__menu-img background__images background__images-drinks">
+        <h2>Thick Milkshakes</h2>
+      </div>
+      <div class="section__menu">
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+        </div>
+      </div>
+    </div>
+
     <div class="container__section-about-us">
       <h1 class="title__about-us">
         About Us
@@ -193,11 +309,12 @@ export default {
 .container__home {
   .hero {
     height: 100vh;
-    background-image: url("@/assets/img/hero-medium.jpg");
+    background-image: url("@/assets/img/hero.webp");
     background-color: hsla(0, 0%, 0%, 0.7);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 0 -200px;
     display: flex;
     flex-direction: column;
     align-items: center;

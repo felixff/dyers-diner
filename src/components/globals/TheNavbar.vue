@@ -39,7 +39,7 @@
           <i class="fas fa-times close"></i>
         </div>
         <router-link to="/" @click="changeNavbarState(true)">Home</router-link>
-        <router-link to="/menu" @click="changeNavbarState(true)" class="disabled">Menu</router-link>
+        <router-link to="/ordering" @click="changeNavbarState(true)">Menu</router-link>
         <router-link to="/about" @click="changeNavbarState(true)" class="disabled">About</router-link>
         <router-link to="/contact" @click="changeNavbarState(true)" class="disabled">Contact</router-link>
       </nav>

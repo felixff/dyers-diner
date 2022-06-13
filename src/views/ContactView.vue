@@ -1,5 +1,5 @@
 <template>
-<div class="container__menu">
+<div class="container__contact">
   <main-logo/>
 </div>
 </template>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container__menu {
+.container__contact {
   height: 100vh;
 }
 </style>

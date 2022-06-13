@@ -13,10 +13,14 @@
 }
 
 .fixed {
-  @include lg {
-    height: 5.5em !important;
-    background-color: hsl(347, 49%, 18%, 1) !important;
+
+  &.navbar {
+    @include lg {
+      height: 5.5em !important;
+      background-color: hsl(347, 49%, 18%, 1) !important;
+    }
   }
+
 }
 
 .transparent {
@@ -130,7 +134,7 @@
 
 li {
   &:last-child {
-    display: none!important;
+    display: none !important;
   }
 }
 
@@ -138,7 +142,7 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-image: url("@/assets/img/order.jpg")!important;
+  background-image: url("@/assets/img/order.jpg") !important;
   background-size: cover !important;
   background-color: hsla(1, 2%, 61%, 1) !important;
   background-blend-mode: multiply !important;
