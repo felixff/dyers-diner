@@ -29,23 +29,7 @@
     <div class="container__menu">
       <div class="section__menu">
         <div class="container__menu-items">
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/breakfast.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/breakfast.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/breakfast.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/breakfast.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
+          <menu-item v-for=""
               item-text="Menu Item"
               :item-image="require('@/assets/img/breakfast.png')"
               item-image-title="Menu Item"/>
@@ -285,8 +269,11 @@
 <script>
 import MenuItem from '@/components/elements/MenuItem'
 import MainLogo from '@/components/elements/MainLogo'
+import menuItemsRaw from '@/assets/menu/DyersDinerProducts.json'
 
 import {defineAsyncComponent} from 'vue';
+import {ref} from "vue/dist/vue";
+import _ from "lodash";
 
 const Timeline = defineAsyncComponent(() =>
     import('@/components/elements/TimelineComponent')
@@ -295,6 +282,13 @@ const Timeline = defineAsyncComponent(() =>
 
 export default {
   name: 'HomeView',
+  setup() {
+    const menuItems = ref(menuItemsRaw)
+
+    console.log(menuItems.value)
+
+    return {menuItems}
+  },
   components: {
     MenuItem,
     MainLogo,
@@ -302,6 +296,11 @@ export default {
   },
   data() {
     return {}
+  },
+  computed: {
+    groupedMenuItems() {
+      return _.groupBy(this.menuItems, 'productCategory');
+    }
   }
 }
 </script>
@@ -314,12 +313,16 @@ export default {
     background-blend-mode: multiply;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 -200px;
+    object-fit: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-bottom: 0;
+
+    @include md {
+      background-position: 0 -200px;
+    }
 
     @include underXss {
       height: 100%;
@@ -472,14 +475,15 @@ export default {
         font-size: 1.5rem;
         color: $white-brighter;
         padding: 10px;
+        font-weight: bold;
 
         @include md {
           min-height: 350px;
+          font-size: 3.1rem;
         }
 
         @include lg {
           width: $half-screen-width;
-          font-size: 2.1rem;
           min-height: 460px;
         }
 
