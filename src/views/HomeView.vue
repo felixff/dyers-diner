@@ -15,7 +15,7 @@
       </div>
     </div>
 
-    <div class="container__menu">
+    <div class="container__menu order" style="flex-direction: row !important;">
       <div class="section__menu-img background__images background__images-order">
         <h2>Order Now</h2>
       </div>
@@ -26,227 +26,18 @@
       </div>
     </div>
 
-    <div class="container__menu">
+    <div v-for="(items, group) in groupedMenuItems" :key="group" class="container__menu">
       <div class="section__menu">
         <div class="container__menu-items">
-          <menu-item v-for=""
-              item-text="Menu Item"
+          <menu-item v-for="(item, index) in items"
+                     :key="index"
+              :item-text="item.productName"
               :item-image="require('@/assets/img/breakfast.png')"
               item-image-title="Menu Item"/>
         </div>
       </div>
       <div class="section__menu-img background__images background__images-hot-food">
-        <h2>Hot Food</h2>
-      </div>
-    </div>
-
-    <div class="container__menu">
-      <div class="section__menu-img background__images background__images-extras">
-        <h2>Lite Bites & Little Extras</h2>
-      </div>
-      <div class="section__menu">
-        <div class="container__menu-items">
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/panini.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/panini.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/panini.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/panini.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/panini.png')"
-              item-image-title="Menu Item"/>
-        </div>
-      </div>
-    </div>
-
-    <div class="container__menu">
-      <div class="section__menu">
-        <div class="container__menu-items">
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-        </div>
-      </div>
-      <div class="section__menu-img background__images background__images-cakes-and-sweets">
-        <h2>Something Sweet</h2>
-      </div>
-    </div>
-
-    <div class="container__menu">
-      <div class="section__menu-img background__images background__images-drinks">
-        <h2>Coffee</h2>
-      </div>
-      <div class="section__menu">
-        <div class="container__menu-items">
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-        </div>
-      </div>
-    </div>
-
-    <div class="container__menu">
-      <div class="section__menu">
-        <div class="container__menu-items">
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-        </div>
-      </div>
-      <div class="section__menu-img background__images background__images-cakes-and-sweets">
-        <h2>Hot Chocolate</h2>
-      </div>
-    </div>
-
-    <div class="container__menu">
-      <div class="section__menu-img background__images background__images-drinks">
-        <h2>Cold Drink</h2>
-      </div>
-      <div class="section__menu">
-        <div class="container__menu-items">
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-        </div>
-      </div>
-    </div>
-
-    <div class="container__menu">
-      <div class="section__menu">
-        <div class="container__menu-items">
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-        </div>
-      </div>
-      <div class="section__menu-img background__images background__images-cakes-and-sweets">
-        <h2>Frappes</h2>
-      </div>
-    </div>
-
-    <div class="container__menu">
-      <div class="section__menu-img background__images background__images-drinks">
-        <h2>Thick Milkshakes</h2>
-      </div>
-      <div class="section__menu">
-        <div class="container__menu-items">
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
-        </div>
+        <h2>{{ group }}</h2>
       </div>
     </div>
 
@@ -272,13 +63,12 @@ import MainLogo from '@/components/elements/MainLogo'
 import menuItemsRaw from '@/assets/menu/DyersDinerProducts.json'
 
 import {defineAsyncComponent} from 'vue';
-import {ref} from "vue/dist/vue";
+import {ref} from "vue";
 import _ from "lodash";
 
 const Timeline = defineAsyncComponent(() =>
     import('@/components/elements/TimelineComponent')
 )
-
 
 export default {
   name: 'HomeView',
@@ -406,11 +196,15 @@ export default {
     display: flex;
     flex-direction: column;
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
       flex-direction: column-reverse !important;
 
       @include lg {
         flex-direction: row !important;
+
+        &:nth-child(even) {
+          flex-direction: row-reverse !important;
+        }
       }
     }
 
@@ -427,6 +221,7 @@ export default {
     .section__menu {
       width: 100%;
       height: 100%;
+      max-height: 30em;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -461,8 +256,8 @@ export default {
       @include lg {
         width: $half-screen-width;
         background-color: inherit;
-        min-height: 460px;
-        height: 100%;
+        height: 460px;
+        //height: 100%;
       }
 
       &-img {
@@ -501,6 +296,7 @@ export default {
         justify-self: center;
         align-self: center;
         gap: 1em;
+        overflow-y: auto;
 
         @include lg {
           display: flex;
