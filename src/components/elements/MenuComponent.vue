@@ -40,11 +40,7 @@ export default {
   },
   computed: {
     groupedMenuItems() {
-      const test = _.groupBy(this.menuItems, 'productCategory');
-
-      console.log(test);
-
-      return test;
+      return _.groupBy(this.menuItems, 'productCategory');
     }
   }
 }
