@@ -15,29 +15,134 @@
       </div>
     </div>
 
-    <div class="container__menu order" style="flex-direction: row !important;">
+    <div class="container__menu">
       <div class="section__menu-img background__images background__images-order">
         <h2>Order Now</h2>
       </div>
       <div class="section__menu order-text">
         <div class="content__order">
-          Please provide text for advertising your ordering service. Things like time / fee / areas you cover.
+          Delivery 7am till 4pm all areas of Ipswich with min order of £10
         </div>
       </div>
     </div>
 
-    <div v-for="(items, group) in groupedMenuItems" :key="group" class="container__menu">
+    <div class="container__menu">
       <div class="section__menu">
         <div class="container__menu-items">
-          <menu-item v-for="(item, index) in items"
-                     :key="index"
-              :item-text="item.productName"
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/breakfast.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/breakfast.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/breakfast.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/breakfast.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
               :item-image="require('@/assets/img/breakfast.png')"
               item-image-title="Menu Item"/>
         </div>
       </div>
       <div class="section__menu-img background__images background__images-hot-food">
-        <h2>{{ group }}</h2>
+        <h2>Hot Food</h2>
+      </div>
+    </div>
+
+    <div class="container__menu">
+      <div class="section__menu-img background__images background__images-extras">
+        <h2>Extras</h2>
+      </div>
+      <div class="section__menu">
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="container__menu">
+      <div class="section__menu">
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+        </div>
+      </div>
+      <div class="section__menu-img background__images background__images-cakes-and-sweets">
+        <h2>Cakes & Sweets</h2>
+      </div>
+    </div>
+
+    <div class="container__menu">
+      <div class="section__menu-img background__images background__images-drinks">
+        <h2>Drinks</h2>
+      </div>
+      <div class="section__menu">
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+        </div>
       </div>
     </div>
 
@@ -60,11 +165,8 @@
 <script>
 import MenuItem from '@/components/elements/MenuItem'
 import MainLogo from '@/components/elements/MainLogo'
-import menuItemsRaw from '@/assets/menu/DyersDinerProducts.json'
 
 import {defineAsyncComponent} from 'vue';
-import {ref} from "vue";
-import _ from "lodash";
 
 const Timeline = defineAsyncComponent(() =>
     import('@/components/elements/TimelineComponent')
@@ -72,13 +174,6 @@ const Timeline = defineAsyncComponent(() =>
 
 export default {
   name: 'HomeView',
-  setup() {
-    const menuItems = ref(menuItemsRaw)
-
-    console.log(menuItems.value)
-
-    return {menuItems}
-  },
   components: {
     MenuItem,
     MainLogo,
@@ -86,11 +181,6 @@ export default {
   },
   data() {
     return {}
-  },
-  computed: {
-    groupedMenuItems() {
-      return _.groupBy(this.menuItems, 'productCategory');
-    }
   }
 }
 </script>
@@ -196,15 +286,11 @@ export default {
     display: flex;
     flex-direction: column;
 
-    &:nth-child(even) {
+    &:nth-child(odd) {
       flex-direction: column-reverse !important;
 
       @include lg {
         flex-direction: row !important;
-
-        &:nth-child(even) {
-          flex-direction: row-reverse !important;
-        }
       }
     }
 
@@ -221,7 +307,6 @@ export default {
     .section__menu {
       width: 100%;
       height: 100%;
-      max-height: 30em;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -256,8 +341,8 @@ export default {
       @include lg {
         width: $half-screen-width;
         background-color: inherit;
-        height: 460px;
-        //height: 100%;
+        min-height: 460px;
+        height: 100%;
       }
 
       &-img {
@@ -296,7 +381,6 @@ export default {
         justify-self: center;
         align-self: center;
         gap: 1em;
-        overflow-y: auto;
 
         @include lg {
           display: flex;
@@ -319,7 +403,8 @@ export default {
       font-size: 2.3rem;
       color: $white-brighter;
       padding: 20px;
-      margin-bottom: 3em;
+      margin-bottom: 1em;
+      margin-top: 1em;
 
       @include md {
         font-size: 3.3rem;

@@ -122,3 +122,8 @@ export default {
   }
 }
 </style>
+<style lang="scss">
+  .container__map {
+    display: none;
+  }
+</style>
