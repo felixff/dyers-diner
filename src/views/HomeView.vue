@@ -27,10 +27,28 @@
     </div>
 
     <div class="container__menu">
-      <div class="section__menu order-text">
-        <div class="content__order">
-          If you fancy some all day breakfast or a fulfilling meal, we offer a variety of items from full english
-          breakfast to vegetarian beans on toast
+      <div class="section__menu">
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/breakfast.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/breakfast.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/breakfast.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/breakfast.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/breakfast.png')"
+              item-image-title="Menu Item"/>
         </div>
       </div>
       <div class="section__menu-img background__images background__images-hot-food">
@@ -42,18 +60,55 @@
       <div class="section__menu-img background__images background__images-extras">
         <h2>Extras</h2>
       </div>
-      <div class="section__menu order-text">
-        <div class="content__order">
-          In a hurry and would like something bite sized or to go? Why not choose from our selection of panini, baps or
-          wraps.
+      <div class="section__menu">
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/panini.png')"
+              item-image-title="Menu Item"/>
         </div>
       </div>
     </div>
 
     <div class="container__menu">
-      <div class="section__menu order-text">
-        <div class="content__order">
-          Handmade cakes, baked with love, and treats for every sweet-tooth, we warn you, you will want a second slice.
+      <div class="section__menu">
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/cakes.png')"
+              item-image-title="Menu Item"/>
         </div>
       </div>
       <div class="section__menu-img background__images background__images-cakes-and-sweets">
@@ -65,9 +120,28 @@
       <div class="section__menu-img background__images background__images-drinks">
         <h2>Drinks</h2>
       </div>
-      <div class="section__menu order-text">
-        <div class="content__order">
-          If you're thirsty, we have have Sparkling Drinks, Juices and Water. Take your pick!
+      <div class="section__menu">
+        <div class="container__menu-items">
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
+          <menu-item
+              item-text="Menu Item"
+              :item-image="require('@/assets/img/drink.png')"
+              item-image-title="Menu Item"/>
         </div>
       </div>
     </div>
@@ -89,6 +163,7 @@
   </div>
 </template>
 <script>
+import MenuItem from '@/components/elements/MenuItem'
 import MainLogo from '@/components/elements/MainLogo'
 
 import {defineAsyncComponent} from 'vue';
@@ -100,6 +175,7 @@ const Timeline = defineAsyncComponent(() =>
 export default {
   name: 'HomeView',
   components: {
+    MenuItem,
     MainLogo,
     Timeline,
   },
@@ -272,7 +348,7 @@ export default {
 
       @include lg {
         width: $half-screen-width;
-        background-color: inherit;
+        background-color: $secondary;
         min-height: 460px;
         height: 100%;
       }
@@ -349,7 +425,6 @@ export default {
       padding: 20px;
       text-align: left;
       margin-bottom: 2em;
-
       @include md {
         max-width: 80%;
         margin-inline: auto;
