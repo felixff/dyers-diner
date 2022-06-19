@@ -60,7 +60,7 @@ export default {
     color: $primary-lighter;
     font-family: PlayFairRegular, serif;
     font-weight: bolder;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 5px;
   }
 

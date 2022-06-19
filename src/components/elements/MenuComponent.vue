@@ -38,6 +38,8 @@ export default {
   data() {
     return {}
   },
+  onMounted() {
+  },
   computed: {
     groupedMenuItems() {
       return _.groupBy(this.menuItems, 'productCategory');
@@ -54,7 +56,7 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: $secondary-inverted;
+  background-color: $secondary;
   padding: 20px;
 
   .menu-nav {

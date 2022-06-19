@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Variables */
+:root {
+  --menu-color: hsla(0, 0%, 100%, 1);
+}
+
+
 /* Box sizing rules */
 *,
 *::before,

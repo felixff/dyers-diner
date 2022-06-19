@@ -2,7 +2,7 @@
   <div class="timeline">
     <vue-horizontal-timeline
         :items="timelineData"
-        timeline-background="#441721FF"
+        timeline-background="#ffffff"
         line-color="#883925FF"
         min-height="200px"
         :content-centered="true"
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { VueHorizontalTimeline } from "vue-horizontal-timeline";
+import {VueHorizontalTimeline} from "vue-horizontal-timeline";
 
 export default {
   name: 'HelloWorld',
@@ -23,7 +23,7 @@ export default {
   },
   data() {
     return {
-      timelineData : [
+      timelineData: [
         {
           title: "2016",
           content: "Started out with first coffee van",
@@ -77,19 +77,18 @@ export default {
 .timeline {
   width: 100%;
   display: none;
-  padding: 40px!important;
-  .vue-horizontal-timeline {
-    box-shadow: none!important;
+  padding-block: 40px !important;
+  box-shadow: 0 0 0 100vmax #ffffff;
+  clip-path: inset(0 -100vmax);
 
-    @include rwd(1446) {
-      transform: translateX(-3.5%);
-      padding: 20px!important;
-    }
+  .vue-horizontal-timeline {
+    box-shadow: none !important;
 
     .timeline {
-      align-self: center!important;
+      align-self: center !important;
     }
   }
+
   @include md {
     display: block;
   }

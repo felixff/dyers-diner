@@ -17,7 +17,7 @@
   &.navbar {
     @include lg {
       height: 5.5em !important;
-      background-color: hsl(347, 49%, 18%, 1) !important;
+      background-color: $primary !important;
     }
   }
 
@@ -85,7 +85,6 @@
   background-blend-mode: multiply;
 
   &-order {
-    border-top: $primary solid 3px;
     background-image: url("@/assets/img/order.jpg");
 
     @include md {
@@ -127,7 +126,7 @@
 }
 
 .has-step-orange::after {
-  background: $secondary !important;
+  background: $primary-lighter !important;
 
 
 }
