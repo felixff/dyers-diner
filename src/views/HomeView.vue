@@ -19,11 +19,12 @@
       <div class="section__menu-img background__images background__images-order">
         <h2>Order Now</h2>
       </div>
-      <div class="section__menu order-text"
-           data-aos="fade-up"
-           data-aos-anchor-placement="bottom-bottom"
-           data-aos-duration="1000">
-        <div class="content__order">
+      <div class="section__menu order-text">
+        <div class="content__order"
+             data-aos="fade-up"
+             data-aos-anchor-placement="bottom-bottom"
+             data-aos-duration="1000"
+             data-aos-once="true">
           Delivery 7am till 4pm all areas of Ipswich with min order of £10
         </div>
       </div>
@@ -36,6 +37,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/breakfast.png')"
               item-image-title="Menu Item"/>
@@ -43,6 +45,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/breakfast.png')"
               item-image-title="Menu Item"/>
@@ -50,6 +53,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/breakfast.png')"
               item-image-title="Menu Item"/>
@@ -57,6 +61,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/breakfast.png')"
               item-image-title="Menu Item"/>
@@ -64,6 +69,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/breakfast.png')"
               item-image-title="Menu Item"/>
@@ -85,6 +91,7 @@
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               item-text="Menu Item"
+              data-aos-once="true"
               :item-image="require('@/assets/img/panini.png')"
               item-image-title="Menu Item"/>
           <menu-item
@@ -92,12 +99,14 @@
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               item-text="Menu Item"
+              data-aos-once="true"
               :item-image="require('@/assets/img/panini.png')"
               item-image-title="Menu Item"/>
           <menu-item
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/panini.png')"
               item-image-title="Menu Item"/>
@@ -105,6 +114,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/panini.png')"
               item-image-title="Menu Item"/>
@@ -112,6 +122,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/panini.png')"
               item-image-title="Menu Item"/>
@@ -126,6 +137,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/cakes.png')"
               item-image-title="Menu Item"/>
@@ -133,6 +145,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/cakes.png')"
               item-image-title="Menu Item"/>
@@ -140,6 +153,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/cakes.png')"
               item-image-title="Menu Item"/>
@@ -147,6 +161,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/cakes.png')"
               item-image-title="Menu Item"/>
@@ -154,6 +169,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/cakes.png')"
               item-image-title="Menu Item"/>
@@ -174,6 +190,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/drink.png')"
               item-image-title="Menu Item"/>
@@ -181,6 +198,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/drink.png')"
               item-image-title="Menu Item"/>
@@ -188,6 +206,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/drink.png')"
               item-image-title="Menu Item"/>
@@ -195,6 +214,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/drink.png')"
               item-image-title="Menu Item"/>
@@ -202,6 +222,7 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
+              data-aos-once="true"
               item-text="Menu Item"
               :item-image="require('@/assets/img/drink.png')"
               item-image-title="Menu Item"/>
@@ -214,13 +235,15 @@
         <div class="image__about-us"
              data-aos="fade-right"
              data-aos-anchor-placement="bottom-bottom"
-             data-aos-duration="1000">
+             data-aos-duration="1000"
+             data-aos-once="true">
           <img src="@/assets/img/about-us.webp" alt="Image with the family running the diner">
         </div>
         <div class="content__about-us"
              data-aos="fade-left"
              data-aos-anchor-placement="bottom-bottom"
-             data-aos-duration="1000">
+             data-aos-duration="1000"
+             data-aos-once="true">
           <h1 class="title__about-us">
             About Us
           </h1>
@@ -242,7 +265,8 @@
       <h1 class="title__journey"
           data-aos="fade-up"
           data-aos-anchor-placement="bottom-bottom"
-          data-aos-duration="1000">
+          data-aos-duration="1000"
+          data-aos-once="true">
         Our Journey
       </h1>
       <timeline/>
