@@ -18,6 +18,8 @@ import _ from 'lodash';
 
 import {VueReCaptcha} from 'vue-recaptcha-v3';
 import 'animate.css';
+import {AOS} from 'aos';
+import 'aos/dist/aos.css';
 
 let options = {
   siteKey: process.env.NODE_ENV === 'development' ? process.env.VUE_APP_KEY_DEV : process.env.VUE_APP_KEY_PROD,
@@ -31,5 +33,6 @@ createApp(App)
   .use(router)
   .use(_)
   .use(VueAxios, axios)
+  .use(AOS)
   .use(VueReCaptcha, options)
   .mount('#app')

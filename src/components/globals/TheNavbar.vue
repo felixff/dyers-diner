@@ -57,7 +57,7 @@ export default {
   },
   computed: {
     windowWidthInternal() {
-      return this.$store.state.windowWidthInternal
+      return this.$store.state.windowWidthInternal;
     },
     alwaysVisible() {
       return this.windowWidthInternal >= 1024;
@@ -264,7 +264,7 @@ export default {
           content: '';
           position: absolute;
           width: 90%;
-          border-bottom: $secondary-inverted 1px solid;
+          border-bottom: $secondary 1px solid;
           transform: translateY(30px);
         }
       }

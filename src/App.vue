@@ -22,7 +22,7 @@ export default {
     TheFooter
   },
   mounted() {
-    this.$store.commit('setWindowWidth', window.innerWidth)
+    this.$store.commit('setWindowWidth', window.innerWidth);
     this.$nextTick(() => {
       window.addEventListener("resize", this.onResize, {passive: true});
       window.addEventListener("scroll", this.onScroll, {passive: true});
@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     onResize() {
-      this.$store.commit('setWindowWidth', window.innerWidth)
+      this.$store.commit('setWindowWidth', window.innerWidth);
     },
     onScroll() {
       if (!this.ticking) {

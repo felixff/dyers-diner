@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Variables */
+:root {
+  --menu-color: hsla(0, 0%, 100%, 1);
+}
+
+
 /* Box sizing rules */
 *,
 *::before,
@@ -35,7 +41,7 @@ html:focus-within {
 }
 html {
   scroll-behavior: smooth;
-  background-color: $white-brighter;
+  background-color: $secondary;
 }
 
 /* Set core body defaults */

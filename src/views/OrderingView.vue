@@ -21,7 +21,7 @@ export default {
 <style lang="scss" scoped>
 .container__ordering {
   height: 100%;
-  background-color: $secondary-inverted;
+  background-color: $secondary;
 
   h1 {
     padding-top: 120px;
@@ -39,11 +39,15 @@ export default {
 }
 </style>
 <style lang="scss">
+:root {
+  --menu-color: hsla(0,0%,0%, 0.9);
+}
+
 .navbar {
   position: fixed !important;
 
   .navbar-visible > *{
-    color: $black !important;
+    color: $black;
   }
 }
 </style>

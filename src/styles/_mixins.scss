@@ -54,3 +54,7 @@ $screen-xl-min: 1200px;
     @content;
   }
 }
+
+@mixin global-transition {
+  transition: 0.125s ease-in-out, background-color 0.2s ease-out, color 0.1s ease-out, border 0.1s ease-out;
+}
