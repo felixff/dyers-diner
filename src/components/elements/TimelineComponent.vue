@@ -37,11 +37,21 @@
       </div>
     </div>
     <div v-for="(item, index) in timelineData" class="timeline-item" :key="index">
-      <div class="timeline-item__title"
-           data-aos="zoom-in"
-           data-aos-duration="1000"
+      <div class="timeline-item__text"
+
       >
-        {{ item.title }}
+        <div class="timeline-item__title"
+             data-aos="zoom-in"
+             data-aos-duration="1000"
+        >
+          {{ item.title }}
+        </div>
+        <div class="timeline-item__content"
+             data-aos="zoom-in"
+             data-aos-duration="1000"
+        >
+          {{ item.content }}
+        </div>
       </div>
       <div class="timeline-item__image">
         <img
@@ -69,14 +79,11 @@ export default {
 
       AOS.init();
       // Timeline Scroll Section
-// --------------------------------------------------------------
       const items = $(".timeline li"),
           greyLine = $('.default-line'),
           lineToDraw = $('.draw-line');
 
-// sets the height that the greyLine (.default-line) should be according to `.timeline ul` height
-
-// run this function only if draw line exists on the page
+      // run this function only if draw line exists on the page
       if (lineToDraw.length) {
         $(window).on('scroll', function () {
 
@@ -97,7 +104,6 @@ export default {
             }
           }
 
-          // This takes care of adding the class in-view to the li:before items
           const bottom = lineToDraw.offset().top + lineToDraw.outerHeight(true);
           items.each(function () {
             const circlePosition = $(this).offset();
@@ -124,37 +130,37 @@ export default {
         {
           title: "2016",
           content: "Started out with first coffee van",
-          image: require('@/assets/img/timeline/2022-1.webp')
+          image: require('@/assets/img/timeline/timeline1.webp')
         },
         {
           title: "2017",
           content: "Upgraded to coffee and food van",
-          image: require('@/assets/img/timeline/2022-1.webp')
+          image: require('@/assets/img/timeline/timeline2.webp')
         },
         {
           title: "2020",
           content: "Upgraded to a bigger van and expanded the menu",
-          image: require('@/assets/img/timeline/2022-1.webp')
+          image: require('@/assets/img/timeline/timeline3.webp')
         },
         {
           title: "2021",
           content: "The van burned down in a fire and everything was lost",
-          image: require('@/assets/img/timeline/2022-1.webp')
+          image: require('@/assets/img/timeline/timeline4.webp')
         },
         {
           title: "2021",
           content: "Managed to get a new van and relaunched the business",
-          image: require('@/assets/img/timeline/2022-1.webp')
+          image: require('@/assets/img/timeline/timeline5.webp')
         },
         {
           title: "2022",
           content: "Opened the Chantry Library Cafe with the community's help",
-          image: require('@/assets/img/timeline/2022-1.webp')
+          image: require('@/assets/img/timeline/timeline6.webp')
         },
         {
           title: "2022",
           content: "New website",
-          image: require('@/assets/img/timeline/2022-1.webp')
+          image: require('@/assets/img/timeline/timeline6.webp')
         }
       ]
     }
@@ -183,106 +189,143 @@ export default {
   position: relative;
   margin-bottom: 3em;
 
-  .timeline {
-    padding: 50px;
+  .timeline__separator {
+    position: absolute;
+    height: 100%;
+    display: none;
 
-    ul {
-      padding: 0;
+    @include lg {
+      display: block;
     }
 
-    .default-line {
-      content: '';
-      position: absolute;
-      left: 50%;
-      width: 4px;
-      background: $white-calmer;
-      height: 89%;
-    }
+    .timeline {
+      padding: 50px;
 
-    .draw-line {
-      width: 4px;
-      height: 0;
-      position: absolute;
-      left: 50%;
-      background: $black;
-    }
-
-    ul li {
-      list-style-type: none;
-      position: relative;
-      width: 2px;
-      margin: 0 auto;
-      height: calc(100% * 9/21);
-      background: transparent;
-
-      &.in-view {
-        @include global-transition;
-
-        &::before {
-          content: '';
-          position: absolute;
-          left: 50%;
-          top: 0;
-          transform: translateX(-50%);
-          width: 24px;
-          height: 24px;
-          border-radius: 50%;
-          background-color: $primary;
-          background-size: 20px 20px;
-          background-repeat: no-repeat;
-          background-position: center;
-          @include global-transition;
-        }
+      ul {
+        padding: 0;
       }
 
-      &::before {
+      .default-line {
         content: '';
         position: absolute;
         left: 50%;
-        top: 0;
-        transform: translateX(-50%);
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: inherit;
+        width: 4px;
         background: $white-calmer;
-        transition: all .4s ease-in-out;
+        height: 89%;
       }
 
-    }
-  }
+      .draw-line {
+        width: 4px;
+        height: 0;
+        position: absolute;
+        left: 50%;
+        background: $black;
+      }
 
-  .timeline__separator {
-    position: absolute;
-    //width: 1px;
-    height: 100%;
-    //border-right: 1px solid $black;
+      ul li {
+        list-style-type: none;
+        position: relative;
+        width: 2px;
+        margin: 0 auto;
+        height: calc(100% * 9/21);
+        background: transparent;
+
+        &.in-view {
+          //@include global-transition;
+
+          //&::before {
+          //  content: '';
+          //  position: absolute;
+          //  left: 50%;
+          //  top: 0;
+          //  transform: translateX(-50%);
+          //  width: 24px;
+          //  height: 24px;
+          //  border-radius: 50%;
+          //  background-color: $primary;
+          //  background-size: 20px 20px;
+          //  background-repeat: no-repeat;
+          //  background-position: center;
+          //  @include global-transition;
+          //}
+        }
+
+        //&::before {
+        //  content: '';
+        //  position: absolute;
+        //  left: 50%;
+        //  top: 0;
+        //  transform: translateX(-50%);
+        //  width: 12px;
+        //  height: 12px;
+        //  border-radius: 50%;
+        //  background: inherit;
+        //  background: $white-calmer;
+        //  transition: all .4s ease-in-out;
+        //}
+
+      }
+    }
   }
 
   .timeline-item {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-top: 2em;
+    border-bottom: 1px dotted $primary;
 
-    &:nth-of-type(even) {
-      flex-direction: row-reverse;
+    @include lg {
+      border-bottom: none;
+      flex-direction: row;
     }
 
-    .timeline-item__title {
-      text-align: center;
-      font-family: PlayFairRegular, serif;
-      font-size: 3rem;
-      width: 30%;
+    &:nth-of-type(even) {
+      @include lg {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .timeline-item__text {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+
+      @include lg {
+        width: 30%;
+      }
+
+      .timeline-item__title {
+        text-align: center;
+        font-family: PlayFairRegular, serif;
+        font-size: 1.5rem;
+        justify-self: center;
+        align-self: center;
+        font-weight: bold;
+
+        @include md {
+          font-size: 2.5rem;
+        }
+      }
+
+      .timeline-item__content {
+        font-size: 1.5rem;
+      }
     }
 
     .timeline-item__image {
-      width: 30%;
+      width: 80%;
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @include lg {
+        width: 30%;
+      }
 
       img {
         max-width: 80%;

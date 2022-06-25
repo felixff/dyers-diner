@@ -87,6 +87,117 @@
       "large": null
     }
   },
+
+  {
+    "productCode": 1,
+    "productName": "Cheese Burger",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "3.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Cheese Burger with Bacon",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "4.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Double Cheese Burger",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "5.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Jumbo Hot Dog",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Jumbo Hot Dog with Cheese",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "3.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Chicken Nuggets(7)",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "2.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Plain Chicken Wrap",
+    "productDescription": "Served with lettuce, cucumber and tomatoes with mayonnaise",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "4.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Lemon and Herb Chicken Wrap",
+    "productDescription": "Served with lettuce, cucumber and tomatoes with mayonnaise",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "4.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "BBQ Chicken Wrap",
+    "productDescription": "Served with lettuce, cucumber and tomatoes with mayonnaise",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "4.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Spicy Chicken Wrap",
+    "productDescription": "Served with lettuce, cucumber and tomatoes with mayonnaise",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "4.50",
+      "medium": null,
+      "large": null
+    }
+  },
   {
     "productCode": 1,
     "productName": "Egg on Toast",
@@ -166,7 +277,7 @@
   },
   {
     "productCode": 1,
-    "productName": "Cheese and Beans Toastie",
+    "productName": "Cheese and Ham Toastie",
     "productDescription": "",
     "productCategory": "Light Bites and Little Extras",
     "price": {
@@ -188,7 +299,7 @@
   },
   {
     "productCode": 1,
-    "productName": "Cheese and ???? Panini",
+    "productName": "Cheese and Baco Panini",
     "productDescription": "served with side salad",
     "productCategory": "Light Bites and Little Extras",
     "price": {
@@ -230,84 +341,19 @@
       "large": null
     }
   },
+
   {
     "productCode": 1,
-    "productName": "Slices ??????????",
-    "productDescription": "",
-    "productCategory": "Light Bites and Little Extras",
-    "price": {
-      "regular": "1.50",
-      "medium": null,
-      "large": null
-    }
-  },
-  {
-    "productCode": 1,
-    "productName": "Scones (Plain)",
-    "productDescription": "served with butter and Jam",
-    "productCategory": "Something Sweet",
-    "price": {
-      "regular": "2.00",
-      "medium": null,
-      "large": null
-    }
-  },
-  {
-    "productCode": 1,
-    "productName": "Scones (Fruity)",
-    "productDescription": "served with butter and Jam",
-    "productCategory": "Something Sweet",
-    "price": {
-      "regular": "2.00",
-      "medium": null,
-      "large": null
-    }
-  },
-  {
-    "productCode": 1,
-    "productName": "Scones (??????)",
-    "productDescription": "served with butter and Jam",
-    "productCategory": "Something Sweet",
-    "price": {
-      "regular": "2.00",
-      "medium": null,
-      "large": null
-    }
-  },
-  {
-    "productCode": 1,
-    "productName": "Cream Tea",
-    "productDescription": "",
-    "productCategory": "Something Sweet",
-    "price": {
-      "regular": "4.00",
-      "medium": null,
-      "large": null
-    }
-  },
-  {
-    "productCode": 1,
-    "productName": "Croissants",
-    "productDescription": "served with butter and Jam",
-    "productCategory": "Something Sweet",
-    "price": {
-      "regular": "1.50",
-      "medium": null,
-      "large": null
-    }
-  },
-  {
-    "productCode": 1,
-    "productName": "Toasted Tea Cakes",
+    "productName": "Scones (Cheese)",
     "productDescription": "served with butter",
     "productCategory": "Something Sweet",
     "price": {
-      "regular": "1.50",
+      "regular": "2.00",
       "medium": null,
       "large": null
     }
   },
-  {
+    {
     "productCode": 1,
     "productName": "Slice of Cake",
     "productDescription": "",
@@ -699,6 +745,105 @@
     "productCategory": "Thick Milkshakes",
     "price": {
       "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Biscoff",
+    "productDescription": "",
+    "productCategory": "Frappe",
+    "price": {
+      "regular": "3.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Sticky Toffee Pudding",
+    "productDescription": "",
+    "productCategory": "Frappe",
+    "price": {
+      "regular": "3.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Toffee Crunch",
+    "productDescription": "",
+    "productCategory": "Frappe",
+    "price": {
+      "regular": "3.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Honeycomb Crunch",
+    "productDescription": "",
+    "productCategory": "Frappe",
+    "price": {
+      "regular": "3.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Cookies and Cream",
+    "productDescription": "",
+    "productCategory": "Frappe",
+    "price": {
+      "regular": "3.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "White Mocha",
+    "productDescription": "",
+    "productCategory": "Frappe",
+    "price": {
+      "regular": "3.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Mocha",
+    "productDescription": "",
+    "productCategory": "Frappe",
+    "price": {
+      "regular": "3.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Salted Caramel",
+    "productDescription": "",
+    "productCategory": "Frappe",
+    "price": {
+      "regular": "3.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 1,
+    "productName": "Caramel",
+    "productDescription": "",
+    "productCategory": "Frappe",
+    "price": {
+      "regular": "3.50",
       "medium": null,
       "large": null
     }

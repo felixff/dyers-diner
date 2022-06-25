@@ -57,7 +57,7 @@ export default {
   },
   computed: {
     windowWidthInternal() {
-      return this.$store.state.windowWidthInternal
+      return this.$store.state.windowWidthInternal;
     },
     alwaysVisible() {
       return this.windowWidthInternal >= 1024;

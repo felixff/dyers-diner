@@ -38,41 +38,41 @@
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/breakfast.png')"
-              item-image-title="Menu Item"/>
+              item-text="Breakfast"
+              :item-image="require('@/assets/img/menu/hot-food1.webp')"
+              item-image-title="Breakfast"/>
           <menu-item
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/breakfast.png')"
-              item-image-title="Menu Item"/>
+              item-text="Cheeseburgers & Bacon"
+              :item-image="require('@/assets/img/menu/hot-food2.webp')"
+              item-image-title="Cheeseburgers & Bacon"/>
           <menu-item
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/breakfast.png')"
-              item-image-title="Menu Item"/>
+              item-text="Wraps"
+              :item-image="require('@/assets/img/menu/hot-food3.webp')"
+              item-image-title="Wraps"/>
           <menu-item
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/breakfast.png')"
-              item-image-title="Menu Item"/>
+              item-text="Cheeseburgers"
+              :item-image="require('@/assets/img/menu/hot-food4.webp')"
+              item-image-title="Cheeseburgers"/>
           <menu-item
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/breakfast.png')"
-              item-image-title="Menu Item"/>
+              item-text="Breakfast Rolls"
+              :item-image="require('@/assets/img/menu/hot-food5.webp')"
+              item-image-title="Breakfast Rolls"/>
         </div>
       </div>
       <div class="section__menu-img background__images background__images-hot-food">
@@ -90,42 +90,34 @@
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
-              item-text="Menu Item"
+              item-text="Panini"
               data-aos-once="true"
-              :item-image="require('@/assets/img/panini.png')"
-              item-image-title="Menu Item"/>
+              :item-image="require('@/assets/img/menu/extras1.webp')"
+              item-image-title="Panini"/>
           <menu-item
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
-              item-text="Menu Item"
+              item-text="Sausage Rolls"
               data-aos-once="true"
-              :item-image="require('@/assets/img/panini.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              data-aos="zoom-in"
-              data-aos-anchor-placement="bottom-bottom"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/panini.png')"
-              item-image-title="Menu Item"/>
+              :item-image="require('@/assets/img/menu/extras2.webp')"
+              item-image-title="Sausage Rolls"/>
           <menu-item
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/panini.png')"
-              item-image-title="Menu Item"/>
+              item-text="Jacket Potatoes"
+              :item-image="require('@/assets/img/menu/extras3.webp')"
+              item-image-title="Jacket Potatoes"/>
           <menu-item
-              data-aos="zoom-in"
-              data-aos-anchor-placement="bottom-bottom"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/panini.png')"
-              item-image-title="Menu Item"/>
+            data-aos="zoom-in"
+            data-aos-anchor-placement="bottom-bottom"
+            data-aos-duration="1000"
+            data-aos-once="true"
+            item-text="Cheese Scones"
+            :item-image="require('@/assets/img/menu/cakes3.webp')"
+            item-image-title="Cheese Scones"/>
         </div>
       </div>
     </div>
@@ -138,41 +130,25 @@
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
+              item-text="Fruity Cakes"
+              :item-image="require('@/assets/img/menu/cakes1.webp')"
+              item-image-title="Fruity Cakes"/>
           <menu-item
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
+              item-text="Brownies"
+              :item-image="require('@/assets/img/menu/cakes2.webp')"
+              item-image-title="Brownies"/>
           <menu-item
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              data-aos="zoom-in"
-              data-aos-anchor-placement="bottom-bottom"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
-          <menu-item
-              data-aos="zoom-in"
-              data-aos-anchor-placement="bottom-bottom"
-              data-aos-duration="1000"
-              data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/cakes.png')"
-              item-image-title="Menu Item"/>
+              item-text="Chocolate Cakes"
+              :item-image="require('@/assets/img/menu/cakes4.webp')"
+              item-image-title="Chocolate Cakes"/>
         </div>
       </div>
       <div class="section__menu-img background__images background__images-cakes-and-sweets">
@@ -191,72 +167,70 @@
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
+              item-text="Coffee Selection"
+              :item-image="require('@/assets/img/menu/drinks1.webp')"
+              item-image-title="Coffee Selection"/>
           <menu-item
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
+              item-text="Hot Chocolate"
+              :item-image="require('@/assets/img/menu/drinks2.webp')"
+              item-image-title="Hot Chocolate"/>
           <menu-item
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
+              item-text="Frappes"
+              :item-image="require('@/assets/img/menu/drinks3.webp')"
+              item-image-title="Frappes"/>
           <menu-item
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
+              item-text="Thick Milkshakes"
+              :item-image="require('@/assets/img/menu/drinks4.webp')"
+              item-image-title="Thick Milkshakes"/>
           <menu-item
               data-aos="zoom-in"
               data-aos-anchor-placement="bottom-bottom"
               data-aos-duration="1000"
               data-aos-once="true"
-              item-text="Menu Item"
-              :item-image="require('@/assets/img/drink.png')"
-              item-image-title="Menu Item"/>
+              item-text="Thick Milkshakes"
+              :item-image="require('@/assets/img/menu/drinks5.webp')"
+              item-image-title="Thick Milkshakes"/>
         </div>
       </div>
     </div>
 
     <div class="container__section-about-us">
-      <div class="container__about-us__content">
-        <div class="image__about-us"
-             data-aos="fade-right"
-             data-aos-anchor-placement="bottom-bottom"
-             data-aos-duration="1000"
-             data-aos-once="true">
-          <img src="@/assets/img/about-us.webp" alt="Image with the family running the diner">
-        </div>
-        <div class="content__about-us"
-             data-aos="fade-left"
-             data-aos-anchor-placement="bottom-bottom"
-             data-aos-duration="1000"
-             data-aos-once="true">
-          <h1 class="title__about-us">
-            About Us
-          </h1>
-          <div class="description__about-us">
-            We have been established in 2016 and have grown as a business year on year. What started out as something to
-            do after being made redundant from my last job has turned into my life and I love it. I work so hard day
-            after day to offer the best service and to stand above the rest. <br><br>
-            We have worked alongside Little mix and we take part in carnivals, car shows and all sorts of other events.
-            <br><br>
-            The year 2022 has started amazingly and now we also have a cafe in the back of Chantry Library. Our little
-            cafe has become very popular within the Chantry community. We welcome people of all walks of the earth, so
-            eat some good food and have a good time.
-          </div>
+      <div class="image__about-us"
+           data-aos="fade-right"
+           data-aos-anchor-placement="bottom-bottom"
+           data-aos-duration="1000"
+           data-aos-once="true">
+        <img src="@/assets/img/about-us.webp" alt="Image with the family running the diner">
+      </div>
+      <div class="content__about-us"
+           data-aos="fade-left"
+           :data-aos-anchor-placement="animationAnchorPoint"
+           data-aos-duration="1000"
+           data-aos-once="true">
+        <h1 class="title__about-us">
+          About Us
+        </h1>
+        <div class="description__about-us">
+          We have been established in 2016 and have grown as a business year on year. What started out as something to
+          do after being made redundant from my last job has turned into my life and I love it. I work so hard day
+          after day to offer the best service and to stand above the rest. <br><br>
+          We have worked alongside Little mix and we take part in carnivals, car shows and all sorts of other events.
+          <br><br>
+          The year 2022 has started amazingly and now we also have a cafe in the back of Chantry Library. Our little
+          cafe has become very popular within the Chantry community. We welcome people of all walks of the earth, so
+          eat some good food and have a good time.
         </div>
       </div>
     </div>
@@ -289,6 +263,12 @@ export default {
   setup() {
     onMounted(() => {
       AOS.init();
+
+      let scrollRef = 0;
+
+      window.addEventListener('scroll',() => {
+        scrollRef <= 100 ? scrollRef++ : AOS.refresh();
+      })
     });
   },
   components: {
@@ -298,6 +278,11 @@ export default {
   },
   data() {
     return {}
+  },
+  computed: {
+    animationAnchorPoint() {
+      return this.$store.state.windowWidthInternal > 1024 ? 'bottom-bottom' : 'top-bottom';
+    }
   }
 }
 </script>
@@ -445,6 +430,8 @@ export default {
         height: 100%;
         color: $white-brighter;
         padding: 10px;
+        font-size: 2rem;
+
         @include lg {
           font-family: PlayFairRegular, serif;
           font-size: 2rem;
@@ -525,69 +512,75 @@ export default {
     justify-content: center;
     margin: 3em auto 3em auto;
 
-    .container__about-us__content {
-      display: flex;
-      align-items: center;
+    @include lg {
       flex-direction: row;
+    }
 
-      & > * {
-        padding: 20px;
-      }
+    & > * {
+      padding: 20px;
+    }
 
-      .image__about-us {
+    .image__about-us {
+
+      @include lg {
         max-width: 40%;
-
-        img {
-          border-radius: 50%;
-        }
       }
 
-      .title__about-us {
-        font-family: PlayFairRegular, serif;
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    .title__about-us {
+      font-family: PlayFairRegular, serif;
+      font-size: 1.4rem;
+      color: $black;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-bottom: 2px dotted $primary;
+        width: 100%;
+      }
+
+      @include md {
+        font-size: 2.7rem;
+      }
+    }
+
+    .content__about-us {
+      font-size: 1.2rem;
+      color: $black;
+      padding: 20px;
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8em;
+
+      @include md {
+        max-width: 80%;
+        margin-inline: auto;
+        padding: 10px;
+      }
+
+      @include lg {
+        max-width: 60%;
+      }
+
+      .description__about-us {
         font-size: 1.4rem;
-        color: $black;
-        position: relative;
-
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          border-bottom: 2px dotted $primary;
-          width: 100%;
-        }
-
-        @include md {
-          font-size: 2.7rem;
-        }
-      }
-
-      .content__about-us {
-        font-size: 1.2rem;
-        color: $black;
-        padding: 20px;
-        text-align: left;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        gap: 0.8em;
-
-        @include md {
-          max-width: 80%;
-          margin-inline: auto;
-          padding: 10px;
-        }
+        font-family: PlayFairRegular, serif;
 
         @include lg {
-          max-width: 60%;
-        }
-
-        .description__about-us {
           font-size: 1.2rem;
-          font-family: PlayFairRegular, serif;
         }
       }
     }
+
   }
 
   .container__journey {
