@@ -87,7 +87,15 @@
   &-order {
     background-image: url("@/assets/img/order.jpg");
 
-    @include md {
+    @include sm {
+      background-position: 0 -300px;
+    }
+
+    @include lg {
+      background-position: 0 0;
+    }
+
+    @include xl {
       background-position: 0 -300px;
     }
   }
@@ -95,15 +103,31 @@
   &-hot-food {
     background-image: url("@/assets/img/breakfast.jpg");
 
-    @include md {
+    @include sm {
       background-position: 0 -500px;
+    }
+
+    @include lg {
+      background-position: 0 0;
+    }
+
+    @include xl {
+      background-position: 0 -300px;
     }
   }
 
   &-extras {
     background-image: url("@/assets/img/paninis.jpg");
 
-    @include md {
+    @include sm {
+      background-position: 0 -300px;
+    }
+
+    @include lg {
+      background-position: 0 0;
+    }
+
+    @include xl {
       background-position: 0 -300px;
     }
   }
@@ -111,7 +135,15 @@
   &-cakes-and-sweets {
     background-image: url("@/assets/img/cakes.jpg");
 
-    @include md {
+    @include sm {
+      background-position: 0 -300px;
+    }
+
+    @include lg {
+      background-position: 0 0;
+    }
+
+    @include xl {
       background-position: 0 -300px;
     }
   }
@@ -119,7 +151,15 @@
   &-drinks {
     background-image: url("@/assets/img/hotchocolate.jpg");
 
-    @include md {
+    @include sm {
+      background-position: 0 -300px;
+    }
+
+    @include lg {
+      background-position: 0 0;
+    }
+
+    @include xl {
       background-position: 0 -300px;
     }
   }

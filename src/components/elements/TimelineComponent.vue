@@ -81,41 +81,43 @@ export default {
       // Timeline Scroll Section
       const items = $(".timeline li"),
           greyLine = $('.default-line'),
-          lineToDraw = $('.draw-line');
+          lineToDraw = $('.draw-line'),
+          timeline = $(".timeline");
 
       // run this function only if draw line exists on the page
-      if (lineToDraw.length) {
+      if (lineToDraw.length && timeline) {
         $(window).on('scroll', function () {
+          if (greyLine !== null && greyLine !== undefined) {
+            // Need to constantly get '.draw-line' height to compare against '.default-line'
+            const greyLineHeight = greyLine.height();
+            const windowDistance = $(window).scrollTop();
+            const windowHeight = $(window).height() / 2;
+            const timelineDistance = timeline.offset().top;
+            timelineHeight = greyLine.height();
 
-          // Need to constantly get '.draw-line' height to compare against '.default-line'
-          const greyLineHeight = greyLine.height(),
-              windowDistance = $(window).scrollTop(),
-              windowHeight = $(window).height() / 2,
-              timelineDistance = $(".timeline").offset().top;
-          timelineHeight = greyLine.height();
+            if (windowDistance >= timelineDistance - windowHeight) {
+              const line = windowDistance - timelineDistance + windowHeight;
 
-          if (windowDistance >= timelineDistance - windowHeight) {
-            const line = windowDistance - timelineDistance + windowHeight;
-
-            if (line <= greyLineHeight) {
-              lineToDraw.css({
-                'height': line + 20 + 'px'
-              });
+              if (line <= greyLineHeight) {
+                lineToDraw.css({
+                  'height': line + 20 + 'px'
+                });
+              }
             }
+
+            const bottom = lineToDraw.offset().top + lineToDraw.outerHeight(true);
+            items.each(function () {
+              const circlePosition = $(this).offset();
+
+              if (bottom > circlePosition.top) {
+                $(this).addClass('in-view');
+              } else {
+                $(this).removeClass('in-view');
+              }
+            });
+
+            return {timelineHeight};
           }
-
-          const bottom = lineToDraw.offset().top + lineToDraw.outerHeight(true);
-          items.each(function () {
-            const circlePosition = $(this).offset();
-
-            if (bottom > circlePosition.top) {
-              $(this).addClass('in-view');
-            } else {
-              $(this).removeClass('in-view');
-            }
-          });
-
-          return {timelineHeight};
         });
       }
     });
@@ -227,7 +229,7 @@ export default {
         position: relative;
         width: 2px;
         margin: 0 auto;
-        height: calc(100% * 9/21);
+        height: calc(100% * 9 / 21);
         background: transparent;
 
         &.in-view {
