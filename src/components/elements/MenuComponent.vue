@@ -10,7 +10,7 @@
       <div class="group-name">{{ groupName }}</div>
       <div class="flex flex-col gap-4">
         <div v-for="(item, index) in group"
-             class="menu__item flex items-center p-5 text-base rounded-lg group shadow cursor-pointer hover:scale-[1.01]"
+             class="menu__item flex items-center p-5 text-base rounded-lg group shadow cursor-pointer"
              :key="index">
           <div class="item-description">{{ item.productName }}</div>
           <span class=short></span>
@@ -18,7 +18,7 @@
             <span>from</span> {{ item.price.regular }}
           </div>
           <div v-else class="item-price">
-            <span>from</span> {{ item.price.regular }}
+            <i class="fas fa-chevron-down"></i>
           </div>
         </div>
       </div>
@@ -72,6 +72,9 @@ export default {
   computed: {
     groupedMenuItems() {
       return _.groupBy(this.menuItems, 'productCategory');
+    },
+    screenWidth() {
+      return this.$store.state.windowWidthInternal;
     }
   },
   methods: {
@@ -179,6 +182,7 @@ export default {
 
       .item-description {
         font-weight: bold;
+        padding-inline: 6px;
       }
 
       .short {
