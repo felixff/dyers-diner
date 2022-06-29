@@ -14,7 +14,12 @@
              :key="index">
           <div class="item-description">{{ item.productName }}</div>
           <span class=short></span>
-          <div class="item-price"><span>from</span> {{ item.price.regular }}</div>
+          <div v-if="screenWidth > 600" class="item-price">
+            <span>from</span> {{ item.price.regular }}
+          </div>
+          <div v-else class="item-price">
+            <span>from</span> {{ item.price.regular }}
+          </div>
         </div>
       </div>
     </div>
@@ -132,7 +137,7 @@ export default {
       }
     }
 
-    @include lg {
+    @include xl {
       display: inline-block;
     }
   }
@@ -152,6 +157,10 @@ export default {
     }
 
     @include lg {
+      width: 70%;
+    }
+
+    @include xl {
       width: 35%;
     }
 

@@ -302,7 +302,7 @@ export default {
     justify-content: center;
     padding-bottom: 0;
 
-    @include md {
+    @include xl {
       background-position: 0 -200px;
     }
 

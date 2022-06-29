@@ -35,6 +35,11 @@ const routes = [
 ]
 
 const router = createRouter({
+  // eslint-disable-next-line
+  scrollBehavior(to, from, savedPosition) {
+    // always scroll to top
+    return { top: 0 }
+  },
   history: createWebHistory(),
   routes
 })
