@@ -1,24 +1,35 @@
 <template>
   <div class="container__menu relative">
-    <div class="menu-nav fixed h-96 w-46 text-left flex flex-col gap-3 border-l-2 border-slate-200">
+    <div class="menu-nav sticky h-96 w-46 text-left flex flex-col gap-3 border-l-2 border-slate-200 top-12">
       <a v-for="(group, groupName) in groupedMenuItems" :key="groupName" :href="`#${groupName}`" :id="`nav${groupName}`"
-         class="text-black text-left flex align-middle pl-10 pt-5 pb-5 border-transparent border-l-2 h-15 pointer">
+         class="text-black text-left flex align-middle pl-5 pt-3 pb-3 border-transparent border-l-2 h-15 pointer">
         {{ groupName }}
       </a>
     </div>
-    <div v-for="(group, groupName) in groupedMenuItems" class="menu__group" :key="groupName" :id="groupName">
-      <div class="group-name">{{ groupName }}</div>
-      <div class="flex flex-col gap-4">
-        <div v-for="(item, index) in group"
-             class="menu__item flex items-center p-5 text-base rounded-lg group shadow cursor-pointer"
-             :key="index">
-          <div class="item-description">{{ item.productName }}</div>
-          <span class=short></span>
-          <div v-if="screenWidth > 600" class="item-price">
-            <span>from</span> {{ item.price.regular }}
+    <div class="container__menu-groups">
+      <div v-for="(group, groupName) in groupedMenuItems" class="menu__group" :key="groupName" :id="groupName"
+           :style="screenWidth < 768 ? {'border-bottom' : '1px solid rgba(0, 0, 0, 0.2)'} :  {'border-bottom' : 'none'}">
+        <div class="group-name__container" @click="menuExpanded[groupName] = !menuExpanded[groupName]">
+          <div class="group-name" :class="{'group-control' : screenWidth < 768}">{{ groupName }}</div>
+          <div v-if="screenWidth < 768 && menuExpanded[groupName] === false">
+            <i class="fas fa-chevron-down chevron"></i>
           </div>
-          <div v-else class="item-price">
-            <i class="fas fa-chevron-down"></i>
+          <div v-else-if="screenWidth < 768 && menuExpanded[groupName]">
+            <i class="fas fa-chevron-up chevron"></i>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4" :class="{'shrunk' : screenWidth < 768 && menuExpanded[groupName] === false}">
+          <div v-for="(item, index) in group"
+               class="menu__item flex items-center p-5 text-base rounded-lg group shadow cursor-pointer transition"
+               :key="index" @click="addToCart">
+            <div class="item-description">{{ item.productName }}</div>
+            <span class=short></span>
+            <div v-if="screenWidth > 600" class="item-price">
+              £{{ item.price.regular }}
+            </div>
+            <div v-else class="item-price">
+              <i class="fas fa-chevron-down"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -38,36 +49,20 @@ export default {
     return {menuItems}
   },
   data() {
-    return {}
+    return {
+      menuExpanded: {},
+    }
   },
   mounted() {
-    const mainNavItems = document.querySelectorAll('.navbar a');
-
-    mainNavItems.forEach(item => {
-      if (item.innerText !== 'Home') {
-        item.style.display = 'none';
-      } else {
-        item.style.color = '#65011AFF'
-      }
+    const groups = Object.keys(this.groupedMenuItems);
+    groups.forEach(group => {
+      this.menuExpanded[group] = false;
     })
-
-    const menuSections = document.querySelectorAll('.menu__group');
-    const navItems = document.querySelectorAll('.menu-nav a');
-
-    window.addEventListener('scroll', this.trackMenu(mainNavItems, menuSections, navItems));
+    window.addEventListener("scroll", this.trackMenu(), {passive: true});
   },
   unmounted() {
-    const mainNavItems = document.querySelectorAll('.navbar a');
-
-    mainNavItems.forEach(item => {
-      if (item.innerText !== 'Home') {
-        item.style.display = 'block';
-      } else {
-        item.style.color = null;
-      }
-    })
-
-    window.removeEventListener('scroll', this.trackMenu());
+    this.$store.commit('setNavbarFixed', false);
+    window.removeEventListener("scroll", this.trackMenu(), true);
   },
   computed: {
     groupedMenuItems() {
@@ -78,22 +73,19 @@ export default {
     }
   },
   methods: {
-    trackMenu(mainNavItems, menuSections, navItems) {
+    addToCart() {
+      this.$store.dispatch('addToCart');
+    },
+    trackMenu() {
       return () => {
-        mainNavItems.forEach(item => {
-          if (item.innerText === 'Home' && scrollY <= 10) {
-            item.style.color = '#65011AFF';
-          } else if (item.innerText === 'Home') {
-            item.style.color = 'white';
-          }
-        })
+        const menuSections = document.querySelectorAll('.menu__group');
+        const navItems = document.querySelectorAll('.menu-nav a');
 
         let current = '';
         menuSections.forEach((section) => {
           const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
 
-          if (scrollY >= sectionTop - sectionHeight + screen.height / 2) {
+          if (scrollY >= sectionTop - 200 + screen.height / 2) {
             current = section.getAttribute('id');
           }
         });
@@ -120,21 +112,104 @@ export default {
   width: 100%;
   align-self: flex-end;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  justify-content: center;
   align-items: flex-start;
-  background-color: $secondary;
-  padding: 20px;
+  background-color: transparent;
+  gap: 5em;
+
+  @include md {
+    justify-content: flex-end;
+  }
+
+  .container__menu-groups {
+    background-color: $secondary;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 30%);
+    -moz-box-shadow: 0 1px 2px rgb(0 0 0 / 30%);
+    -webkit-box-shadow: 0 1px 2px rgb(0 0 0 / 30%);
+    -o-box-shadow: 0 1px 2px rgb(0 0 0 / 30%);
+    border-radius: 12px;
+    padding: 20px;
+
+    @include lg {
+      width: 675px;
+    }
+
+    //@include md {
+    //  width: 100%;
+    //}
+    //
+    //@include lg {
+    //  width: 70%;
+    //}
+    //
+    //@include xl {
+    //  width: 50%;
+    //}
+
+    .menu__group {
+      width: 100%;
+      text-align: left;
+      margin-bottom: 2em;
+      margin-right: 5em;
+      height: 100%;
+
+      .group-name__container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+
+        .group-name {
+          font-family: PlayFairRegular, serif;
+          font-size: 2rem;
+          margin-bottom: 0.5em;
+          font-weight: bold;
+        }
+      }
+
+      .menu__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .item-description {
+          font-weight: bold;
+          padding-right: 40px;
+        }
+
+        .short {
+          flex: 1;
+
+          &::after {
+            content: " ";
+            flex: 1;
+            border-bottom: 1px dotted $primary;
+          }
+        }
+
+        .item-price {
+          font-size: 0.9rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
 
   .menu-nav {
     height: fit-content;
-    left: 20%;
-    top: 20%;
-    transform: translate3d(-50%, 0, 0);
+    top: 60px;
     display: none;
     border-left-width: 2px;
+    margin-top: 5em;
+    margin-left: 3em;
 
     a {
+      font-size: 1rem;
+      transform: translateX(-2px);
+
       &.active {
         border-color: rgb(30 41 59) !important;
       }
@@ -149,57 +224,18 @@ export default {
     align-items: center;
   }
 
-  .menu__group {
-    width: 90%;
-    text-align: left;
-    margin-block: 2em;
-    margin-inline: auto;
+  .shrunk {
+    height: 0 !important;
+    overflow: hidden;
+  }
 
-    @include md {
-      width: 100%;
-    }
+  .group-control {
+    font-size: 2rem;
+  }
 
-    @include lg {
-      width: 70%;
-    }
-
-    @include xl {
-      width: 35%;
-    }
-
-    .group-name {
-      font-family: PlayFairRegular, serif;
-      font-size: 2rem;
-      margin-bottom: 0.5em;
-      font-weight: bold;
-    }
-
-    .menu__item {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-
-      .item-description {
-        font-weight: bold;
-        padding-inline: 6px;
-      }
-
-      .short {
-        flex: 1;
-
-        &::after {
-          content: " ";
-          flex: 1;
-          border-bottom: 1px dotted $primary;
-        }
-      }
-
-      .item-price {
-        font-size: 0.9rem;
-        font-weight: 600;
-      }
-    }
+  .chevron {
+    color: $primary;
+    width: 20px;
   }
 }
 </style>

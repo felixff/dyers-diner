@@ -1,8 +1,19 @@
 [
   {
     "productCode": 1,
+    "productName": "Ultimate Breakfast",
+    "productDescription": "3 sausages, 3 bacon, 2 hashbrowns, 1 egg, beans, mushrooms and a slice of toast",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "9.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 2,
     "productName": "All Day Breakfast",
-    "productDescription": "2 sausages, 2 bacon, 2 hashbrowns, 1 egg, beans, mushrooms and a slice of toast",
+    "productDescription": "2 sausages, 2 bacon, 3 hashbrowns, 2 egg, beans, mushrooms and a slice of toast",
     "productCategory": "Hot Food",
     "price": {
       "regular": "6.00",
@@ -11,7 +22,7 @@
     }
   },
   {
-    "productCode": 2,
+    "productCode": 3,
     "productName": "Small Breakfast",
     "productDescription": "1 sausage, 1 bacon, 1 egg, beans and a slice of toast",
     "productCategory": "Hot Food",
@@ -22,7 +33,7 @@
     }
   },
   {
-    "productCode": 3,
+    "productCode": 4,
     "productName": "Vegetarian Breakfast",
     "productDescription": "2 eggs, 2 hashbrowns, beans, mushrooms and a slice of toast",
     "productCategory": "Hot Food",
@@ -33,7 +44,7 @@
     }
   },
   {
-    "productCode": 4,
+    "productCode": 5,
     "productName": "Breakfast Wrap",
     "productDescription": "2 sausages, 2 bacon, 1 egg, 1 hashbrown with cheese and sauce",
     "productCategory": "Hot Food",
@@ -44,7 +55,51 @@
     }
   },
   {
-    "productCode": 5,
+    "productCode": 6,
+    "productName": "Cheese Omelette",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "2.50",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 7,
+    "productName": "Cheese and Onion Omelette",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 8,
+    "productName": "Cheese and Mushroom Omelette",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 8,
+    "productName": "Cheese and Ham Omelette",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 9,
     "productName": "Sausage Bap",
     "productDescription": "",
     "productCategory": "Hot Food",
@@ -55,7 +110,18 @@
     }
   },
   {
-    "productCode": 6,
+    "productCode": 10,
+    "productName": "Sausage Bap",
+    "productDescription": "",
+    "productCategory": "Hot Food",
+    "price": {
+      "regular": "3.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 11,
     "productName": "Bacon Roll",
     "productDescription": "",
     "productCategory": "Hot Food",
@@ -66,7 +132,7 @@
     }
   },
   {
-    "productCode": 7,
+    "productCode": 12,
     "productName": "Bacon and Egg Roll",
     "productDescription": "",
     "productCategory": "Hot Food",
@@ -77,7 +143,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 13,
     "productName": "Sausage, Bacon and Egg Roll",
     "productDescription": "",
     "productCategory": "Hot Food",
@@ -89,7 +155,7 @@
   },
 
   {
-    "productCode": 1,
+    "productCode": 14,
     "productName": "Cheese Burger",
     "productDescription": "",
     "productCategory": "Hot Food",
@@ -100,7 +166,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 15,
     "productName": "Cheese Burger with Bacon",
     "productDescription": "",
     "productCategory": "Hot Food",
@@ -111,7 +177,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 16,
     "productName": "Double Cheese Burger",
     "productDescription": "",
     "productCategory": "Hot Food",
@@ -122,7 +188,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 17,
     "productName": "Jumbo Hot Dog",
     "productDescription": "",
     "productCategory": "Hot Food",
@@ -133,7 +199,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 18,
     "productName": "Jumbo Hot Dog with Cheese",
     "productDescription": "",
     "productCategory": "Hot Food",
@@ -144,8 +210,8 @@
     }
   },
   {
-    "productCode": 1,
-    "productName": "Chicken Nuggets(7)",
+    "productCode": 18,
+    "productName": "Chicken Nuggets (7)",
     "productDescription": "",
     "productCategory": "Hot Food",
     "price": {
@@ -155,7 +221,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 20,
     "productName": "Plain Chicken Wrap",
     "productDescription": "Served with lettuce, cucumber and tomatoes with mayonnaise",
     "productCategory": "Hot Food",
@@ -166,7 +232,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 21,
     "productName": "Lemon and Herb Chicken Wrap",
     "productDescription": "Served with lettuce, cucumber and tomatoes with mayonnaise",
     "productCategory": "Hot Food",
@@ -177,7 +243,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 22,
     "productName": "BBQ Chicken Wrap",
     "productDescription": "Served with lettuce, cucumber and tomatoes with mayonnaise",
     "productCategory": "Hot Food",
@@ -188,7 +254,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 23,
     "productName": "Spicy Chicken Wrap",
     "productDescription": "Served with lettuce, cucumber and tomatoes with mayonnaise",
     "productCategory": "Hot Food",
@@ -199,7 +265,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 24,
     "productName": "Egg on Toast",
     "productDescription": "",
     "productCategory": "Hot Food",
@@ -210,7 +276,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 25,
     "productName": "Toast and Jam",
     "productDescription": "",
     "productCategory": "Hot Food",
@@ -221,8 +287,8 @@
     }
   },
   {
-    "productCode": 1,
-    "productName": "Jacket Potatoe With Cheese",
+    "productCode": 26,
+    "productName": "Jacket Potato with Cheese",
     "productDescription": "served with side salad",
     "productCategory": "Hot Food",
     "price": {
@@ -232,8 +298,8 @@
     }
   },
   {
-    "productCode": 1,
-    "productName": "Jacket Potatoe With Beans",
+    "productCode": 27,
+    "productName": "Jacket Potato with Beans",
     "productDescription": "served with side salad",
     "productCategory": "Hot Food",
     "price": {
@@ -243,8 +309,8 @@
     }
   },
   {
-    "productCode": 1,
-    "productName": "Jacket Potatoe With Cheese and Beans",
+    "productCode": 28,
+    "productName": "Jacket Potato with Cheese and Beans",
     "productDescription": "served with side salad",
     "productCategory": "Hot Food",
     "price": {
@@ -254,8 +320,8 @@
     }
   },
   {
-    "productCode": 1,
-    "productName": "Jacket Potatoe With Tuna",
+    "productCode": 29,
+    "productName": "Jacket Potato with Tuna",
     "productDescription": "served with side salad",
     "productCategory": "Hot Food",
     "price": {
@@ -265,7 +331,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 30,
     "productName": "Cheese Toastie",
     "productDescription": "",
     "productCategory": "Light Bites and Little Extras",
@@ -276,7 +342,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 31,
     "productName": "Cheese and Ham Toastie",
     "productDescription": "",
     "productCategory": "Light Bites and Little Extras",
@@ -287,7 +353,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 32,
     "productName": "Cheese and Onion Toastie",
     "productDescription": "",
     "productCategory": "Light Bites and Little Extras",
@@ -298,8 +364,8 @@
     }
   },
   {
-    "productCode": 1,
-    "productName": "Cheese and Baco Panini",
+    "productCode": 33,
+    "productName": "Cheese and Bacon Panini",
     "productDescription": "served with side salad",
     "productCategory": "Light Bites and Little Extras",
     "price": {
@@ -309,7 +375,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 34,
     "productName": "Cheese and Chutney Panini",
     "productDescription": "served with side salad",
     "productCategory": "Light Bites and Little Extras",
@@ -320,7 +386,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 35,
     "productName": "Pizza Slice",
     "productDescription": "",
     "productCategory": "Light Bites and Little Extras",
@@ -331,7 +397,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 36,
     "productName": "Sausage Roll",
     "productDescription": "",
     "productCategory": "Light Bites and Little Extras",
@@ -343,9 +409,20 @@
   },
 
   {
-    "productCode": 1,
+    "productCode": 37,
     "productName": "Scones (Cheese)",
-    "productDescription": "served with butter",
+    "productDescription": "Served with butter",
+    "productCategory": "Light Bites and Little Extras",
+    "price": {
+      "regular": "2.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 38,
+    "productName": "Slice of Cake",
+    "productDescription": "",
     "productCategory": "Something Sweet",
     "price": {
       "regular": "2.00",
@@ -353,30 +430,52 @@
       "large": null
     }
   },
-    {
-    "productCode": 1,
-    "productName": "Slice of Cake",
-    "productDescription": "",
-    "productCategory": "Something Sweet",
-    "price": {
-      "regular": "1.50",
-      "medium": null,
-      "large": null
-    }
-  },
   {
-    "productCode": 1,
+    "productCode": 39,
     "productName": "Chocolate Brownie",
     "productDescription": "",
     "productCategory": "Something Sweet",
     "price": {
-      "regular": "1.50",
+      "regular": "2.00",
       "medium": null,
       "large": null
     }
   },
   {
-    "productCode": 1,
+    "productCode": 40,
+    "productName": "Biscoff Rocky Road",
+    "productDescription": "",
+    "productCategory": "Something Sweet",
+    "price": {
+      "regular": "2.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 41,
+    "productName": "Millionaires Shortbread",
+    "productDescription": "",
+    "productCategory": "Something Sweet",
+    "price": {
+      "regular": "2.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 42,
+    "productName": "Afternoon Tea",
+    "productDescription": "Minimum of 2 people, Wednesday afternoon only. Order needs to be in by Sunday before 1pm.",
+    "productCategory": "Something Sweet",
+    "price": {
+      "regular": "2.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 43,
     "productName": "Espresso",
     "productDescription": "",
     "productCategory": "Coffee",
@@ -387,7 +486,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 44,
     "productName": "Latte",
     "productDescription": "",
     "productCategory": "Coffee",
@@ -398,7 +497,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 45,
     "productName": "Cappuccino",
     "productDescription": "",
     "productCategory": "Coffee",
@@ -409,7 +508,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 46,
     "productName": "Flat White",
     "productDescription": "",
     "productCategory": "Coffee",
@@ -420,7 +519,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 47,
     "productName": "Americano",
     "productDescription": "",
     "productCategory": "Coffee",
@@ -431,7 +530,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 48,
     "productName": "Mocha",
     "productDescription": "",
     "productCategory": "Coffee",
@@ -442,7 +541,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 49,
     "productName": "Tea",
     "productDescription": "",
     "productCategory": "Coffee",
@@ -453,7 +552,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 50,
     "productName": "Hot Chocolate",
     "productDescription": "",
     "productCategory": "Hot Chocolate",
@@ -464,7 +563,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 51,
     "productName": "White Hot Chocolate",
     "productDescription": "",
     "productCategory": "Hot Chocolate",
@@ -475,7 +574,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 52,
     "productName": "White Mocha",
     "productDescription": "",
     "productCategory": "Hot Chocolate",
@@ -486,7 +585,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 53,
     "productName": "Lemon Meringue",
     "productDescription": "",
     "productCategory": "Hot Chocolate",
@@ -497,7 +596,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 54,
     "productName": "Chocolate Orange",
     "productDescription": "",
     "productCategory": "Hot Chocolate",
@@ -508,7 +607,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 55,
     "productName": "Winter Spice",
     "productDescription": "",
     "productCategory": "Hot Chocolate",
@@ -519,7 +618,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 56,
     "productName": "Black Forest",
     "productDescription": "",
     "productCategory": "Hot Chocolate",
@@ -530,7 +629,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 57,
     "productName": "Crunchy",
     "productDescription": "",
     "productCategory": "Hot Chocolate",
@@ -541,7 +640,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 58,
     "productName": "Bueno",
     "productDescription": "",
     "productCategory": "Hot Chocolate",
@@ -552,7 +651,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 59,
     "productName": "Chocolate Mountain",
     "productDescription": "",
     "productCategory": "Hot Chocolate",
@@ -563,7 +662,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 60,
     "productName": "White Maple",
     "productDescription": "",
     "productCategory": "Hot Chocolate",
@@ -574,7 +673,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 61,
     "productName": "Maple",
     "productDescription": "",
     "productCategory": "Hot Chocolate",
@@ -585,7 +684,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 62,
     "productName": "Vanilla",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -596,7 +695,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 63,
     "productName": "Chocolate",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -607,7 +706,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 64,
     "productName": "Banana",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -618,7 +717,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 65,
     "productName": "Strawberry",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -629,7 +728,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 66,
     "productName": "Chocolate Orange",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -640,7 +739,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 67,
     "productName": "Strawberry Forest",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -651,7 +750,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 68,
     "productName": "Peanut Butter",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -662,7 +761,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 69,
     "productName": "Mint Chocolate",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -673,7 +772,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 70,
     "productName": "Vanilla Banana",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -684,7 +783,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 80,
     "productName": "Banana Strawberry",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -695,7 +794,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 81,
     "productName": "Bountyfull",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -706,7 +805,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 82,
     "productName": "Vanilla Fudge",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -717,7 +816,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 83,
     "productName": "Black Forest",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -728,7 +827,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 84,
     "productName": "Oreo",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -739,7 +838,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 85,
     "productName": "Smarties",
     "productDescription": "",
     "productCategory": "Thick Milkshakes",
@@ -750,7 +849,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 86,
     "productName": "Biscoff",
     "productDescription": "",
     "productCategory": "Frappe",
@@ -761,7 +860,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 87,
     "productName": "Sticky Toffee Pudding",
     "productDescription": "",
     "productCategory": "Frappe",
@@ -772,7 +871,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 88,
     "productName": "Toffee Crunch",
     "productDescription": "",
     "productCategory": "Frappe",
@@ -783,7 +882,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 89,
     "productName": "Honeycomb Crunch",
     "productDescription": "",
     "productCategory": "Frappe",
@@ -794,7 +893,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 90,
     "productName": "Cookies and Cream",
     "productDescription": "",
     "productCategory": "Frappe",
@@ -805,7 +904,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 91,
     "productName": "White Mocha",
     "productDescription": "",
     "productCategory": "Frappe",
@@ -816,7 +915,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 92,
     "productName": "Mocha",
     "productDescription": "",
     "productCategory": "Frappe",
@@ -827,7 +926,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 93,
     "productName": "Salted Caramel",
     "productDescription": "",
     "productCategory": "Frappe",
@@ -838,7 +937,7 @@
     }
   },
   {
-    "productCode": 1,
+    "productCode": 94,
     "productName": "Caramel",
     "productDescription": "",
     "productCategory": "Frappe",

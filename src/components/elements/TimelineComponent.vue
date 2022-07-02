@@ -168,8 +168,11 @@ export default {
     }
   },
   methods: {
+    // eslint-disable-next-line no-unused-vars
     getFadeStyleImage(index) {
-      return index % 2 !== 0 ? 'fade-left' : 'fade-right';
+      const fadeOrZoom = this.$store.state.windowWidthInternal < 1024 ? 'zoom' : 'fade';
+
+      return fadeOrZoom === 'fade' ? (index % 2 !== 0 ? 'fade-left' : 'fade-right') : 'zoom-in';
     },
     // eslint-disable-next-line no-unused-vars
     lineHeight(index) {
@@ -212,7 +215,7 @@ export default {
         position: absolute;
         left: 50%;
         width: 4px;
-        background: $white-calmer;
+        background: inherit;
         height: 89%;
       }
 
@@ -221,7 +224,7 @@ export default {
         height: 0;
         position: absolute;
         left: 50%;
-        background: $black;
+        background: $primary;
       }
 
       ul li {
@@ -231,41 +234,6 @@ export default {
         margin: 0 auto;
         height: calc(100% * 9 / 21);
         background: transparent;
-
-        &.in-view {
-          //@include global-transition;
-
-          //&::before {
-          //  content: '';
-          //  position: absolute;
-          //  left: 50%;
-          //  top: 0;
-          //  transform: translateX(-50%);
-          //  width: 24px;
-          //  height: 24px;
-          //  border-radius: 50%;
-          //  background-color: $primary;
-          //  background-size: 20px 20px;
-          //  background-repeat: no-repeat;
-          //  background-position: center;
-          //  @include global-transition;
-          //}
-        }
-
-        //&::before {
-        //  content: '';
-        //  position: absolute;
-        //  left: 50%;
-        //  top: 0;
-        //  transform: translateX(-50%);
-        //  width: 12px;
-        //  height: 12px;
-        //  border-radius: 50%;
-        //  background: inherit;
-        //  background: $white-calmer;
-        //  transition: all .4s ease-in-out;
-        //}
-
       }
     }
   }
@@ -279,6 +247,7 @@ export default {
     position: relative;
     margin-top: 2em;
     border-bottom: 1px dotted $primary;
+    gap: 3em;
 
     @include lg {
       border-bottom: none;
@@ -326,8 +295,12 @@ export default {
       align-items: center;
 
       @include lg {
-        width: 30%;
+        width: 50%;
       }
+
+      @include customWidth(1200) {
+         width: 30%;
+       }
 
       img {
         max-width: 80%;

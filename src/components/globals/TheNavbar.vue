@@ -6,16 +6,19 @@
           <a href="tel:07872184132"><i class="fa fa-phone" aria-hidden="true"></i>07872 184 132</a>
         </div>
         <div class="email">
-          <a href="mailto:email@dyersdiner.co.uk"><i class="fa fa-envelope" aria-hidden="true"></i>email@dyersdiner.co.uk</a>
+          <a href="mailto:mark@dyersdinerandcoffeeshack.co.uk"><i class="fa fa-envelope" aria-hidden="true"></i>mark@dyersdinerandcoffeeshack.co.uk</a>
         </div>
       </div>
       <div class="social-links__top">
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-twitter"></i>
+        <a id="facebook-bottom-link" href="https://facebook.com/dyersdinerandcoffeeshack/" target="_blank">
+          <i class="fab fa-facebook footer__social"></i>
+        </a>
+        <a id="instagram-bottom-link" href="https://www.instagram.com/dyersdinerandcoffeeshack/?hl=en" target="_blank">
+          <i class="fab fa-instagram footer__social"></i>
+        </a>
       </div>
     </div>
-    <div class="navbar" :class="{'fixed' : innerWindowScrolled}">
+    <div class="navbar" :class="{'fixed' : innerWindowScrolled || isNavbarFixed}" style="position: relative;top: 0">
       <div
           v-if="alwaysVisible === false"
           class="burger-menu"
@@ -32,7 +35,7 @@
           'navbar-not-visible': hideAway && alwaysVisible === false,
           'full-screen-navbar': windowWidthInternal < 1024,
           'navbar-visible': navbarHidden === false,
-          'raised' : innerWindowScrolled
+          'raised' : innerWindowScrolled || isNavbarFixed
         }"
       >
         <div v-if="closed === false && windowWidthInternal < 1024" class="close-button" @click="changeNavbarState(true)">
@@ -56,6 +59,9 @@ export default {
     }
   },
   computed: {
+    isNavbarFixed() {
+      return this.$store.state.isNavbarFixed ?? false;
+    },
     windowWidthInternal() {
       return this.$store.state.windowWidthInternal;
     },
@@ -214,11 +220,12 @@ export default {
     }
 
     .navbar-visible {
-      transform: translateX(0);
+      transform: translateX(0vw);
     }
 
     .navbar-not-visible {
-      transform: translateX(100%) !important;
+      transform: translateX(100vw) !important;
+      display: none !important;
     }
 
     .close-button {

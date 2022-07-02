@@ -111,13 +111,13 @@
               :item-image="require('@/assets/img/menu/extras3.webp')"
               item-image-title="Jacket Potatoes"/>
           <menu-item
-            data-aos="zoom-in"
-            data-aos-anchor-placement="bottom-bottom"
-            data-aos-duration="1000"
-            data-aos-once="true"
-            item-text="Cheese Scones"
-            :item-image="require('@/assets/img/menu/cakes3.webp')"
-            item-image-title="Cheese Scones"/>
+              data-aos="zoom-in"
+              data-aos-anchor-placement="bottom-bottom"
+              data-aos-duration="1000"
+              data-aos-once="true"
+              item-text="Cheese Scones"
+              :item-image="require('@/assets/img/menu/cakes3.webp')"
+              item-image-title="Cheese Scones"/>
         </div>
       </div>
     </div>
@@ -215,10 +215,11 @@
         <img src="@/assets/img/about-us.webp" alt="Image with the family running the diner">
       </div>
       <div class="content__about-us"
-           data-aos="fade-left"
+           :data-aos="fadeStyle"
            :data-aos-anchor-placement="animationAnchorPoint"
            data-aos-duration="1000"
-           data-aos-once="true">
+           data-aos-once="true"
+      >
         <h1 class="title__about-us">
           About Us
         </h1>
@@ -266,14 +267,16 @@ export default {
 
       let scrollRef = 0;
 
-      window.addEventListener('scroll',() => {
+      window.addEventListener('scroll', () => {
         scrollRef <= 100 ? scrollRef++ : AOS.refresh();
       })
     });
   },
   components: {
+    // eslint-disable-next-line vue/no-unused-components
     MenuItem,
     MainLogo,
+    // eslint-disable-next-line vue/no-unused-components
     Timeline,
   },
   data() {
@@ -282,6 +285,11 @@ export default {
   computed: {
     animationAnchorPoint() {
       return this.$store.state.windowWidthInternal > 1024 ? 'bottom-bottom' : 'top-bottom';
+    },
+    fadeStyle() {
+      const fadeOrZoom = this.$store.state.windowWidthInternal < 1024 ? 'zoom' : 'fade';
+
+      return fadeOrZoom === 'fade' ? 'fade-left' : 'zoom-in';
     }
   }
 }

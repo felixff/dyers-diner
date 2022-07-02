@@ -79,7 +79,12 @@ a {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  display: none;
+
+  @include lg {
+    display: block !important;
+    width: 5px;
+  }
 }
 
 /* Track */
