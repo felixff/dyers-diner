@@ -2,7 +2,7 @@
   {
     "productCode": 1,
     "productName": "Ultimate Breakfast",
-    "productDescription": "3 sausages, 3 bacon, 2 hashbrowns, 1 egg, beans, mushrooms and a slice of toast",
+    "productDescription": "3 sausages, 3 bacon, 3 hash browns, 2 egg, beans, mushrooms and 2 slices of toast",
     "productCategory": "Hot Food",
     "price": {
       "regular": "9.00",
@@ -13,7 +13,7 @@
   {
     "productCode": 2,
     "productName": "All Day Breakfast",
-    "productDescription": "2 sausages, 2 bacon, 3 hashbrowns, 2 egg, beans, mushrooms and a slice of toast",
+    "productDescription": "2 sausages, 2 bacon, 2 hash browns, 1 egg, beans, mushrooms and a slice of toast",
     "productCategory": "Hot Food",
     "price": {
       "regular": "6.00",
@@ -35,7 +35,7 @@
   {
     "productCode": 4,
     "productName": "Vegetarian Breakfast",
-    "productDescription": "2 eggs, 2 hashbrowns, beans, mushrooms and a slice of toast",
+    "productDescription": "2 eggs, 2 hash browns, beans, mushrooms and a slice of toast",
     "productCategory": "Hot Food",
     "price": {
       "regular": "4.00",
@@ -46,7 +46,7 @@
   {
     "productCode": 5,
     "productName": "Breakfast Wrap",
-    "productDescription": "2 sausages, 2 bacon, 1 egg, 1 hashbrown with cheese and sauce",
+    "productDescription": "2 sausages, 2 bacon, 1 egg, 1 hash brown with cheese and sauce",
     "productCategory": "Hot Food",
     "price": {
       "regular": "4.00",
@@ -90,17 +90,6 @@
   {
     "productCode": 8,
     "productName": "Cheese and Ham Omelette",
-    "productDescription": "",
-    "productCategory": "Hot Food",
-    "price": {
-      "regular": "3.00",
-      "medium": null,
-      "large": null
-    }
-  },
-  {
-    "productCode": 9,
-    "productName": "Sausage Bap",
     "productDescription": "",
     "productCategory": "Hot Food",
     "price": {
@@ -469,7 +458,7 @@
     "productDescription": "Minimum of 2 people, Wednesday afternoon only. Order needs to be in by Sunday before 1pm.",
     "productCategory": "Something Sweet",
     "price": {
-      "regular": "2.00",
+      "regular": "20.00",
       "medium": null,
       "large": null
     }

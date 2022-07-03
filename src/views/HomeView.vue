@@ -554,6 +554,7 @@ export default {
       font-size: 1.4rem;
       color: $black;
       position: relative;
+      font-weight: bold;
 
       &::after {
         content: "";
@@ -590,7 +591,6 @@ export default {
       }
 
       .description__about-us {
-        font-size: 1.4rem;
         font-family: PlayFairRegular, serif;
 
         @include lg {

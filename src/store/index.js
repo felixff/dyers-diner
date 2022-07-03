@@ -97,7 +97,17 @@ export default createStore({
         console.log(err);
       })
     },
-    createOrder({commit}) {
+    submitOrder({state}, {address, email, telephone}) {
+      axios.post('/api/v1/order/submit', {
+        order : {
+          address: address,
+          email: email,
+          telephone: telephone,
+          items: state.cart
+        }
+      }).then((response) => {
+        console.log(response);
+      })
     }
   },
   modules: {}

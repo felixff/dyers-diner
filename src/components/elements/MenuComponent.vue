@@ -22,7 +22,10 @@
           <div v-for="(item, index) in group"
                class="menu__item flex items-center p-5 text-base rounded-lg group shadow cursor-pointer transition"
                :key="index" @click="addToCart(group[index])">
-            <div class="item-description">{{ item.productName }}</div>
+            <div class="container__item-description">
+              <div class="item-name">{{ item.productName }}</div>
+              <div class="item-description">{{ item.productDescription }}</div>
+            </div>
             <span class=short></span>
             <div class="item-price">
               £{{ item.price.regular }}
@@ -188,10 +191,17 @@ export default {
         justify-content: space-between;
         align-items: center;
 
-        .item-description {
-          font-weight: bold;
-          padding-right: 40px;
+        .container__item-description {
+          .item-name {
+            padding-right: 40px;
+            font-weight: bold;
+          }
+          .item-description {
+            padding-right: 40px;
+            font-size: 0.8rem;
+          }
         }
+
 
         .short {
           flex: 1;
@@ -204,6 +214,7 @@ export default {
         }
 
         .item-price {
+          align-self: flex-start;
           font-size: 0.9rem;
           font-weight: 600;
         }
