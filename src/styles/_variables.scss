@@ -1,12 +1,17 @@
 $primary: hsla(345, 99%, 20%, 1);
+$primary-transparent: hsla(345, 99%, 20%, 0.2);
+$tertiary: #e29723;
 $primary-lighter: hsla(345, 99%, 33%, 1);
 //$secondary: hsla(28, 98%, 48%, 1);
 $secondary: #ffffff;
 $white: #dcdcdc;
 $off-white: #fcfcfb;
-$grey-calmer: #c4c4c4;
+$grey: #e5e7eb;
+$grey-calmer: #ebe7e7;
+$grey-darker: #8f8f8f;
 $white-brighter: #f5f5f5;
 $black: #000000;
+$black-transparent: hsla(0, 0%, 0%, 0.6);
 $select: #00A300;
 
 $full-screen-height: 100vh;

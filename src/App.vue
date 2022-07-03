@@ -48,6 +48,7 @@ export default {
   methods: {
     onResize() {
       this.$store.commit('setWindowWidth', window.innerWidth);
+      this.$store.commit('setWindowHeight', window.innerHeight);
     },
     onScroll() {
       if (!this.ticking) {

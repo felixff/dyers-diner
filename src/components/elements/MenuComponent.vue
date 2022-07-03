@@ -21,14 +21,11 @@
         <div class="flex flex-col gap-4" :class="{'shrunk' : screenWidth < 768 && menuExpanded[groupName] === false}">
           <div v-for="(item, index) in group"
                class="menu__item flex items-center p-5 text-base rounded-lg group shadow cursor-pointer transition"
-               :key="index" @click="addToCart">
+               :key="index" @click="addToCart(group[index])">
             <div class="item-description">{{ item.productName }}</div>
             <span class=short></span>
-            <div v-if="screenWidth > 600" class="item-price">
+            <div class="item-price">
               £{{ item.price.regular }}
-            </div>
-            <div v-else class="item-price">
-              <i class="fas fa-chevron-down"></i>
             </div>
           </div>
         </div>
@@ -41,6 +38,7 @@
 import {ref} from 'vue'
 import menuItemsRaw from '@/assets/menu/DyersDinerProducts.json'
 import _ from 'lodash';
+import format from "@/components/utils/format";
 
 export default {
   name: 'MenuComponent',
@@ -50,6 +48,7 @@ export default {
   },
   data() {
     return {
+      quantityToAdd: 1,
       menuExpanded: {},
     }
   },
@@ -69,12 +68,16 @@ export default {
       return _.groupBy(this.menuItems, 'productCategory');
     },
     screenWidth() {
-      return this.$store.state.windowWidthInternal;
+      return this.$store.state.windowInternalWidth;
     }
   },
   methods: {
-    addToCart() {
-      this.$store.dispatch('addToCart');
+    addToCart(item) {
+      this.$store.commit('addToCart', {
+        description: item.productName,
+        quantity: this.quantityToAdd,
+        price: format.numberWithDecimals(this.quantityToAdd * item.price.regular)
+      });
     },
     trackMenu() {
       return () => {
@@ -109,7 +112,7 @@ export default {
 
 <style lang="scss" scoped>
 .container__menu {
-  width: 100%;
+  width: 80%;
   align-self: flex-end;
   display: flex;
   flex-direction: row;
@@ -118,7 +121,17 @@ export default {
   background-color: transparent;
   gap: 5em;
 
+  @include phoneLandscape {
+    justify-content: center !important;
+  }
+
   @include md {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  @include lg {
+    width: 100%;
     justify-content: flex-end;
   }
 
@@ -230,7 +243,7 @@ export default {
   }
 
   .group-control {
-    font-size: 2rem;
+    font-size: 1.4rem !important;
   }
 
   .chevron {

@@ -1,8 +1,6 @@
 <template>
   <div class="container__ordering">
-<!--    <div v-if="showShoppingCart" class="cart">-->
-<!--      <i class="fa-solid fa-cart-shopping"></i>-->
-<!--    </div>-->
+    <checkout v-if="checkoutEnabled"/>
     <div class="hero__ordering">
       <main-logo/>
       <h1 class="menu-title__ordering">Our Menu</h1>
@@ -13,17 +11,12 @@
           <menu-component/>
         </div>
       </div>
-      <div class="container__spacer">
-        <div class="container__checkout-control overflow-hidden">
-          <button class="cart__checkout text-white font-bold py-2 px-4 rounded-full">
-            Checkout
-          </button>
-          <div class="cart__total">Total: {{ cartTotal }}</div>
-
-        </div>
+      <div class="container__spacer" :class="{'transformed' : !cartVisible && screenWidth < 768}">
+        <cart-component></cart-component>
       </div>
     </div>
-    <div v-if="scrollPosition > 600" class="back-to-top" @click="goToTopOfPage()">
+    <div v-if="scrollPosition > 600 && screenHeight > 400 && screenWidth > 1024" class="back-to-top"
+         @click="goToTopOfPage()">
       <i class="fas fa-caret-up arrow"></i>
     </div>
   </div>
@@ -32,24 +25,25 @@
 <script>
 import MenuComponent from '@/components/elements/MenuComponent'
 import MainLogo from '@/components/elements/MainLogo'
+import CartComponent from "@/components/elements/CartComponent";
+import Checkout from "@/components/elements/CheckoutComponent";
 
 export default {
   name: "OrderingView",
   components: {
+    Checkout,
+    CartComponent,
     MenuComponent,
     MainLogo
   },
   data() {
-   return {
-
-   }
+    return {}
   },
   mounted() {
     const mainNavbar = document.querySelector('.container__navbar');
     const burgerMenu = document.querySelector('.burger-menu');
     mainNavbar.style.position = 'relative';
     if (burgerMenu) {
-      burgerMenu.style.color = '#65011AFF';
       burgerMenu.style.transform = 'translate(-25%, 10%)';
     }
 
@@ -60,7 +54,6 @@ export default {
     const burgerMenu = document.querySelector('.burger-menu');
     mainNavbar.style.position = 'fixed';
     if (burgerMenu) {
-      burgerMenu.style.color = '#f5f5f5';
       burgerMenu.style.transform = 'translate(-50%, 10%)';
     }
 
@@ -68,18 +61,27 @@ export default {
   },
   computed: {
     showShoppingCart() {
-      return this.$store.state.windowWidthInternal < 1024;
-    },
-    cartTotal() {
-      return '£100';
+      return this.$store.state.windowInternalWidth < 1024;
     },
     scrollPosition() {
       return this.$store.state.scrollPosition;
+    },
+    screenHeight() {
+      return this.$store.state.windowInternalHeight;
+    },
+    screenWidth() {
+      return this.$store.state.windowInternalWidth;
+    },
+    checkoutEnabled() {
+      return this.$store.state.checkoutEnabled;
+    },
+    cartVisible() {
+      return this.$store.state.cartEnabled;
     }
   },
   methods: {
     goToTopOfPage() {
-      window.scrollTo({ top: 0, behavior: 'instant' });
+      window.scrollTo({top: 0, behavior: 'instant'});
     }
   }
 }
@@ -88,8 +90,8 @@ export default {
 <style lang="scss" scoped>
 .container__ordering {
   height: 100%;
-  background-color: $off-white;
   display: block;
+  background-color: $off-white;
 
   .hero__ordering {
     height: 50vh;
@@ -106,8 +108,14 @@ export default {
     justify-content: center;
     padding-bottom: 0;
 
+    @include phoneLandscape {
+      height: 2vh;
+      min-height: 10em;
+      justify-content: flex-start;
+    }
+
     .menu-title__ordering {
-      color: $white;
+      color: $white-brighter;
       transform: translateY(-50%);
     }
   }
@@ -120,56 +128,35 @@ export default {
     margin-top: -5em;
     padding-bottom: 20px;
 
-    .container__ordering-menu{
+    .container__ordering-menu {
+      width: 60%;
+      padding-left: 20px;
       flex-grow: 1;
     }
 
     .container__spacer {
-      width: 30%;
-      display: none;
+      width: 88%;
+      position: fixed;
+      right: 0;
+      top: 2em;
+      transition: all 0.5s ease-out;
+      display: flex;
+
+      &.transformed {
+        transform: translateX(100%);
+      }
+
+      @include phoneLandscape {
+      }
 
       @include md {
-        display: flex;
+        position: relative;
+        width: 50%;
       }
 
       @include lg {
+        width: 30%;
       }
-
-      .container__checkout-control {
-        width: 70%;
-        position: sticky;
-        top: 0;
-        align-self: flex-start;
-        justify-content: flex-start;
-        margin-top: 3em;
-        margin-right: 2em;
-        padding: 20px;
-        background-color: $secondary;
-        box-shadow: 0 1px 1px rgb(0 0 0 / 30%);
-        -moz-box-shadow: 0 1px 1px rgb(0 0 0 / 30%);
-        -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 30%);
-        -o-box-shadow: 0 1px 1px rgb(0 0 0 / 30%);
-        border-radius:12px;
-
-
-        .cart__checkout {
-          background-color: $primary;
-        }
-      }
-    }
-  }
-
-  .cart {
-    color: $primary;
-    font-size: 2rem;
-    z-index: 11;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transform: translate(-10%, 130%);
-
-    &:hover {
-      cursor: pointer;
     }
   }
 
@@ -185,12 +172,14 @@ export default {
     margin-top: 3em;
     display: flex;
     margin-inline: auto;
+    justify-content: center;
+    align-items: center;
   }
 
   .back-to-top {
     position: fixed;
-    bottom: 5em;
-    right: 5em;
+    bottom: 2em;
+    right: 2em;
     height: 50px;
     width: 50px;
     border-radius: 50%;

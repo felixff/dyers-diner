@@ -16,7 +16,7 @@
     </div>
 
     <div class="container__menu order-border">
-      <div class="section__menu-img background__images background__images-order">
+      <div class="section__menu-img background__images background__images-order cursor-pointer" @click="goToMenu()">
         <h2>Order Now</h2>
       </div>
       <div class="section__menu order-text">
@@ -75,13 +75,13 @@
               item-image-title="Breakfast Rolls"/>
         </div>
       </div>
-      <div class="section__menu-img background__images background__images-hot-food">
+      <div class="section__menu-img background__images background__images-hot-food cursor-pointer" @click="goToMenu()">
         <h2>Hot Food</h2>
       </div>
     </div>
 
     <div class="container__menu">
-      <div class="section__menu-img background__images background__images-extras">
+      <div class="section__menu-img background__images background__images-extras cursor-pointer" @click="goToMenu()">
         <h2>Extras</h2>
       </div>
       <div class="section__menu">
@@ -151,13 +151,13 @@
               item-image-title="Chocolate Cakes"/>
         </div>
       </div>
-      <div class="section__menu-img background__images background__images-cakes-and-sweets">
+      <div class="section__menu-img background__images background__images-cakes-and-sweets cursor-pointer" @click="goToMenu()">
         <h2>Cakes & Sweets</h2>
       </div>
     </div>
 
     <div class="container__menu last">
-      <div class="section__menu-img background__images background__images-drinks">
+      <div class="section__menu-img background__images background__images-drinks cursor-pointer" @click="goToMenu()">
         <h2>Drinks</h2>
       </div>
       <div class="section__menu">
@@ -209,7 +209,7 @@
     <div class="container__section-about-us">
       <div class="image__about-us"
            data-aos="fade-right"
-           data-aos-anchor-placement="bottom-bottom"
+           data-aos-anchor-placement="top-bottom"
            data-aos-duration="1000"
            data-aos-once="true">
         <img src="@/assets/img/about-us.webp" alt="Image with the family running the diner">
@@ -217,6 +217,7 @@
       <div class="content__about-us"
            :data-aos="fadeStyle"
            :data-aos-anchor-placement="animationAnchorPoint"
+
            data-aos-duration="1000"
            data-aos-once="true"
       >
@@ -284,12 +285,21 @@ export default {
   },
   computed: {
     animationAnchorPoint() {
-      return this.$store.state.windowWidthInternal > 1024 ? 'bottom-bottom' : 'top-bottom';
+      return this.$store.state.windowInternalWidth > 1024 ? 'bottom-bottom' : 'top-bottom';
     },
     fadeStyle() {
-      const fadeOrZoom = this.$store.state.windowWidthInternal < 1024 ? 'zoom' : 'fade';
+      const fadeOrZoom = this.$store.state.windowInternalWidth < 1024 ? 'zoom' : 'fade';
 
       return fadeOrZoom === 'fade' ? 'fade-left' : 'zoom-in';
+    },
+    aosOffset() {
+      return this.$store.state.windowInternalHeight > 500 ? 0 : -100;
+    }
+  },
+  methods: {
+    goToMenu(section) {
+      console.log(section);
+      this.$router.push('ordering');
     }
   }
 }
@@ -472,7 +482,7 @@ export default {
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 2rem;
         color: $white-brighter;
         padding: 10px;
         font-weight: bold;
@@ -520,7 +530,7 @@ export default {
     justify-content: center;
     margin: 3em auto 3em auto;
 
-    @include lg {
+    @include customWidth(1600) {
       flex-direction: row;
     }
 
@@ -530,7 +540,7 @@ export default {
 
     .image__about-us {
 
-      @include lg {
+      @include customWidth(1600) {
         max-width: 40%;
       }
 
@@ -575,7 +585,7 @@ export default {
         padding: 10px;
       }
 
-      @include lg {
+      @include customWidth(1600) {
         max-width: 60%;
       }
 

@@ -63,7 +63,7 @@ export default {
       return this.$store.state.isNavbarFixed ?? false;
     },
     windowWidthInternal() {
-      return this.$store.state.windowWidthInternal;
+      return this.$store.state.windowInternalWidth;
     },
     alwaysVisible() {
       return this.windowWidthInternal >= 1024;
@@ -193,7 +193,7 @@ export default {
     }
 
     .burger-menu {
-      color: $white-brighter;
+      color: $tertiary;
       font-size: 2rem;
       z-index: 11;
       position: fixed;
