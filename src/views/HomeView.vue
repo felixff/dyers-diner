@@ -297,8 +297,8 @@ export default {
     }
   },
   methods: {
+    // eslint-disable-next-line no-unused-vars
     goToMenu(section) {
-      console.log(section);
       this.$router.push('ordering');
     }
   }

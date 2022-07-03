@@ -12,6 +12,7 @@ const ADD_TO_CART = 'addToCart';
 const REMOVE_FROM_CART = 'removeFromCart';
 const TOGGLE_CHECKOUT = 'toggleCheckout';
 const TOGGLE_CART = 'toggleCart';
+const RESET_CART = 'resetCart';
 
 export default createStore({
   state: {
@@ -82,6 +83,12 @@ export default createStore({
         return total + item.price;
       }, 0)
     },
+    [RESET_CART](state) {
+      state.cart.items = [];
+      state.cart.total = 0;
+      state.checkoutEnabled = false;
+      state.cartEnabled = false;
+    },
     [TOGGLE_CHECKOUT](state, enableCheckout) {
       state.checkoutEnabled = enableCheckout;
     },
@@ -97,7 +104,7 @@ export default createStore({
         console.log(err);
       })
     },
-    submitOrder({state}, {address, email, telephone}) {
+    submitOrder({state, commit}, {address, email, telephone}) {
       axios.post('/api/v1/order/submit', {
         order : {
           address: address,
@@ -106,7 +113,7 @@ export default createStore({
           items: state.cart
         }
       }).then((response) => {
-        console.log(response);
+        commit(RESET_CART)
       })
     }
   },
