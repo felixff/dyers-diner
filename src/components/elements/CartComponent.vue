@@ -1,6 +1,6 @@
 <template>
   <div class="container__cart">
-    <div class="cart-handle rounded-l-full" @click="toggleCart()">
+    <div v-if="cart.total > 0" class="cart-handle rounded-l-full" @click="toggleCart()">
       <i class="fas fa-shopping-cart fa-xl"></i>
     </div>
     <div class="cart-control">

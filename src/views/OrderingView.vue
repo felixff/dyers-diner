@@ -11,7 +11,7 @@
           <menu-component/>
         </div>
       </div>
-      <div class="container__spacer" :class="{'transformed' : !cartVisible && screenWidth < 768}">
+      <div class="container__spacer" :class="{'transformed' : (!cartVisible || cartTotal <= 0) && screenWidth < 768 }">
         <cart-component></cart-component>
       </div>
     </div>
@@ -44,7 +44,10 @@ export default {
     const burgerMenu = document.querySelector('.burger-menu');
     mainNavbar.style.position = 'relative';
     if (burgerMenu) {
-      burgerMenu.style.transform = 'translate(-25%, 10%)';
+      burgerMenu.style.position = 'absolute';
+      burgerMenu.style.right = '10px';
+      burgerMenu.style.top = '10px';
+      burgerMenu.style.transform = 'translateY(-80px)';
     }
 
     this.$store.commit('setNavbarFixed', true);
@@ -54,7 +57,10 @@ export default {
     const burgerMenu = document.querySelector('.burger-menu');
     mainNavbar.style.position = 'fixed';
     if (burgerMenu) {
-      burgerMenu.style.transform = 'translate(-50%, 10%)';
+      burgerMenu.style.transform = 'translateY(0)';
+      burgerMenu.style.position = 'fixed';
+      burgerMenu.style.right = '0';
+      burgerMenu.style.top = '0';
     }
 
     this.$store.commit('setNavbarFixed', false);
@@ -77,6 +83,9 @@ export default {
     },
     cartVisible() {
       return this.$store.state.cartEnabled;
+    },
+    cartTotal() {
+      return this.$store.state.cart.total;
     }
   },
   methods: {
