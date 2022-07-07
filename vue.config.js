@@ -18,10 +18,7 @@ module.exports = defineConfig({
   devServer: {
     proxy: {
       '^/api/': {
-        target: 'http://127.0.0.1:80',
-        pathRewrite: {
-          '^/api' : '/'
-        },
+        target: 'http://127.0.0.1:8000',
         changeOrigin: true, // so CORS doesn't bite us.
         secure:false
       }

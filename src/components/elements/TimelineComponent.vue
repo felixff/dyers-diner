@@ -38,7 +38,6 @@
     </div>
     <div v-for="(item, index) in timelineData" class="timeline-item" :key="index">
       <div class="timeline-item__text"
-
       >
         <div class="timeline-item__title"
              data-aos="zoom-in"
@@ -58,7 +57,7 @@
             :src="item.image"
             :alt="`Timeline image for ${item.title}`"
             :data-aos="getFadeStyleImage(index)"
-            data-aos-anchor-placement="bottom-bottom"
+            data-aos-anchor-placement="top-bottom"
             data-aos-duration="1000"
         />
       </div>
@@ -162,14 +161,22 @@ export default {
         {
           title: "2022",
           content: "New website",
-          image: require('@/assets/img/timeline/timeline6.webp')
+          image: require('@/assets/img/timeline/timeline7.webp')
         }
       ]
     }
   },
+  computed: {
+    aosOffset() {
+      return this.$store.state.windowInternalHeight > 500 ? 0 : -50;
+    }
+  },
   methods: {
+    // eslint-disable-next-line no-unused-vars
     getFadeStyleImage(index) {
-      return index % 2 !== 0 ? 'fade-left' : 'fade-right';
+      const fadeOrZoom = this.$store.state.windowInternalWidth < 1024 ? 'zoom' : 'fade';
+
+      return fadeOrZoom === 'fade' ? (index % 2 !== 0 ? 'fade-left' : 'fade-right') : 'zoom-in';
     },
     // eslint-disable-next-line no-unused-vars
     lineHeight(index) {
@@ -212,7 +219,7 @@ export default {
         position: absolute;
         left: 50%;
         width: 4px;
-        background: $white-calmer;
+        background: inherit;
         height: 89%;
       }
 
@@ -221,7 +228,7 @@ export default {
         height: 0;
         position: absolute;
         left: 50%;
-        background: $black;
+        background: $primary;
       }
 
       ul li {
@@ -231,41 +238,6 @@ export default {
         margin: 0 auto;
         height: calc(100% * 9 / 21);
         background: transparent;
-
-        &.in-view {
-          //@include global-transition;
-
-          //&::before {
-          //  content: '';
-          //  position: absolute;
-          //  left: 50%;
-          //  top: 0;
-          //  transform: translateX(-50%);
-          //  width: 24px;
-          //  height: 24px;
-          //  border-radius: 50%;
-          //  background-color: $primary;
-          //  background-size: 20px 20px;
-          //  background-repeat: no-repeat;
-          //  background-position: center;
-          //  @include global-transition;
-          //}
-        }
-
-        //&::before {
-        //  content: '';
-        //  position: absolute;
-        //  left: 50%;
-        //  top: 0;
-        //  transform: translateX(-50%);
-        //  width: 12px;
-        //  height: 12px;
-        //  border-radius: 50%;
-        //  background: inherit;
-        //  background: $white-calmer;
-        //  transition: all .4s ease-in-out;
-        //}
-
       }
     }
   }
@@ -283,6 +255,7 @@ export default {
     @include lg {
       border-bottom: none;
       flex-direction: row;
+      gap: 3em;
     }
 
     &:nth-of-type(even) {
@@ -304,7 +277,7 @@ export default {
       .timeline-item__title {
         text-align: center;
         font-family: PlayFairRegular, serif;
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         justify-self: center;
         align-self: center;
         font-weight: bold;
@@ -315,7 +288,7 @@ export default {
       }
 
       .timeline-item__content {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
       }
     }
 
@@ -326,6 +299,10 @@ export default {
       align-items: center;
 
       @include lg {
+        width: 50%;
+      }
+
+      @include customWidth(1200) {
         width: 30%;
       }
 

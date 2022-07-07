@@ -19,6 +19,10 @@ export default {
   margin-inline: auto;
   margin-block: 5em 1em;
 
+  @include phoneLandscape {
+    display: none;
+  }
+
   @include underXss {
     margin-block: 8em 1em;
   }

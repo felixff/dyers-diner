@@ -15,6 +15,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none !important;
+}
+
 /* Remove default margin */
 body,
 h1,
@@ -79,24 +83,22 @@ a {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  //display: none;
+
+  //@include lg {
+    display: block !important;
+    width: 5px;
+  //}
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  background: -moz-linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  background: -webkit-linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#461822", endColorstr="#F27302", GradientType=1);
+  background-color: $grey;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  background: -moz-linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  background: -webkit-linear-gradient(to bottom, hsla(347, 49%, 18%, 1) 31%, hsla(28, 98%, 48%, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#461822", endColorstr="#F27302", GradientType=1);
-  height: 1em !important;
+  background-color: darkgray;
 }
 
 /* Handle on hover */

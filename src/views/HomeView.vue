@@ -16,7 +16,7 @@
     </div>
 
     <div class="container__menu order-border">
-      <div class="section__menu-img background__images background__images-order">
+      <div class="section__menu-img background__images background__images-order cursor-pointer" @click="goToMenu()">
         <h2>Order Now</h2>
       </div>
       <div class="section__menu order-text">
@@ -75,13 +75,13 @@
               item-image-title="Breakfast Rolls"/>
         </div>
       </div>
-      <div class="section__menu-img background__images background__images-hot-food">
+      <div class="section__menu-img background__images background__images-hot-food cursor-pointer" @click="goToMenu()">
         <h2>Hot Food</h2>
       </div>
     </div>
 
     <div class="container__menu">
-      <div class="section__menu-img background__images background__images-extras">
+      <div class="section__menu-img background__images background__images-extras cursor-pointer" @click="goToMenu()">
         <h2>Extras</h2>
       </div>
       <div class="section__menu">
@@ -111,13 +111,13 @@
               :item-image="require('@/assets/img/menu/extras3.webp')"
               item-image-title="Jacket Potatoes"/>
           <menu-item
-            data-aos="zoom-in"
-            data-aos-anchor-placement="bottom-bottom"
-            data-aos-duration="1000"
-            data-aos-once="true"
-            item-text="Cheese Scones"
-            :item-image="require('@/assets/img/menu/cakes3.webp')"
-            item-image-title="Cheese Scones"/>
+              data-aos="zoom-in"
+              data-aos-anchor-placement="bottom-bottom"
+              data-aos-duration="1000"
+              data-aos-once="true"
+              item-text="Cheese Scones"
+              :item-image="require('@/assets/img/menu/cakes3.webp')"
+              item-image-title="Cheese Scones"/>
         </div>
       </div>
     </div>
@@ -151,13 +151,13 @@
               item-image-title="Chocolate Cakes"/>
         </div>
       </div>
-      <div class="section__menu-img background__images background__images-cakes-and-sweets">
+      <div class="section__menu-img background__images background__images-cakes-and-sweets cursor-pointer" @click="goToMenu()">
         <h2>Cakes & Sweets</h2>
       </div>
     </div>
 
     <div class="container__menu last">
-      <div class="section__menu-img background__images background__images-drinks">
+      <div class="section__menu-img background__images background__images-drinks cursor-pointer" @click="goToMenu()">
         <h2>Drinks</h2>
       </div>
       <div class="section__menu">
@@ -209,16 +209,18 @@
     <div class="container__section-about-us">
       <div class="image__about-us"
            data-aos="fade-right"
-           data-aos-anchor-placement="bottom-bottom"
+           data-aos-anchor-placement="top-bottom"
            data-aos-duration="1000"
            data-aos-once="true">
         <img src="@/assets/img/about-us.webp" alt="Image with the family running the diner">
       </div>
       <div class="content__about-us"
-           data-aos="fade-left"
+           :data-aos="fadeStyle"
            :data-aos-anchor-placement="animationAnchorPoint"
+
            data-aos-duration="1000"
-           data-aos-once="true">
+           data-aos-once="true"
+      >
         <h1 class="title__about-us">
           About Us
         </h1>
@@ -266,14 +268,16 @@ export default {
 
       let scrollRef = 0;
 
-      window.addEventListener('scroll',() => {
+      window.addEventListener('scroll', () => {
         scrollRef <= 100 ? scrollRef++ : AOS.refresh();
       })
     });
   },
   components: {
+    // eslint-disable-next-line vue/no-unused-components
     MenuItem,
     MainLogo,
+    // eslint-disable-next-line vue/no-unused-components
     Timeline,
   },
   data() {
@@ -281,7 +285,21 @@ export default {
   },
   computed: {
     animationAnchorPoint() {
-      return this.$store.state.windowWidthInternal > 1024 ? 'bottom-bottom' : 'top-bottom';
+      return this.$store.state.windowInternalWidth > 1024 ? 'bottom-bottom' : 'top-bottom';
+    },
+    fadeStyle() {
+      const fadeOrZoom = this.$store.state.windowInternalWidth < 1024 ? 'zoom' : 'fade';
+
+      return fadeOrZoom === 'fade' ? 'fade-left' : 'zoom-in';
+    },
+    aosOffset() {
+      return this.$store.state.windowInternalHeight > 500 ? 0 : -100;
+    }
+  },
+  methods: {
+    // eslint-disable-next-line no-unused-vars
+    goToMenu(section) {
+      this.$router.push('ordering');
     }
   }
 }
@@ -464,7 +482,7 @@ export default {
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 2rem;
         color: $white-brighter;
         padding: 10px;
         font-weight: bold;
@@ -512,7 +530,7 @@ export default {
     justify-content: center;
     margin: 3em auto 3em auto;
 
-    @include lg {
+    @include customWidth(1600) {
       flex-direction: row;
     }
 
@@ -522,7 +540,7 @@ export default {
 
     .image__about-us {
 
-      @include lg {
+      @include customWidth(1600) {
         max-width: 40%;
       }
 
@@ -536,6 +554,7 @@ export default {
       font-size: 1.4rem;
       color: $black;
       position: relative;
+      font-weight: bold;
 
       &::after {
         content: "";
@@ -567,12 +586,11 @@ export default {
         padding: 10px;
       }
 
-      @include lg {
+      @include customWidth(1600) {
         max-width: 60%;
       }
 
       .description__about-us {
-        font-size: 1.4rem;
         font-family: PlayFairRegular, serif;
 
         @include lg {

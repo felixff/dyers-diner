@@ -3,7 +3,7 @@
     <div class="content__footer">
       <div class="section__footer">
         <div class="title__section-footer">Contact</div>
-        <div class="contact__footer">Email: email@dyersdiner.co.uk</div>
+        <div class="contact__footer">Email: <a href="mailto:mark@dyersdinerandcoffeeshack.co.uk">mark@dyersdinerandcoffeeshack.co.uk</a></div>
         <div class="contact__footer">Call: <a href="tel:07872184132">07872 184 132</a></div>
         <div class="contact__footer">Hawthorn Dr, Ipswich IP2 0QY</div>
       </div>
@@ -14,14 +14,11 @@
         <div class="title__section-footer">Follow us</div>
         <div class="socials__footer">Give us a like & follow!</div>
         <div class="socials__footer">
-          <a id="facebook-bottom-link" href="" target="_blank">
+          <a id="facebook-bottom-link" href="https://facebook.com/dyersdinerandcoffeeshack/" target="_blank">
             <i class="fab fa-facebook footer__social"></i>
           </a>
-          <a id="instagram-bottom-link" href="" target="_blank">
+          <a id="instagram-bottom-link" href="https://www.instagram.com/dyersdinerandcoffeeshack/?hl=en" target="_blank">
             <i class="fab fa-instagram footer__social"></i>
-          </a>
-          <a id="snapchat-bottom-link" href="" target="_blank">
-            <i class="fab fa-snapchat footer__social"></i>
           </a>
         </div>
       </div>
