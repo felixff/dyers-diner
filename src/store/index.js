@@ -98,14 +98,14 @@ export default createStore({
   },
   actions: {
     addToCart({commit}) {
-      axios.get('/api/v1/cart/add').then((response) => {
+      axios.get('/api/cart/add').then((response) => {
         console.log(response)
       }, (err) => {
         console.log(err);
       })
     },
     submitOrder({state, commit}, {address, email, telephone}) {
-      axios.post('/api/v1/order/submit', {
+      axios.post('/api/order/submit', {
         order : {
           address: address,
           email: email,
