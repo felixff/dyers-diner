@@ -9,15 +9,15 @@
         Checkout
       </div>
       <div class="form-fields">
+                <div class="container__form-field">
+                  <label for="client-name">Name</label>
+                  <input class="input__field" v-model="clientName" id="client-name" placeholder="Name...">
+                </div>
         <div class="container__form-field">
           <label for="address-first-line">Address</label>
           <input type="text" v-model="addressLine" class="input__field" id="address-first-line"
                  placeholder="First line of your address...">
         </div>
-        <!--        <div class="container__form-field">-->
-        <!--          <label for="address-town">Town</label>-->
-        <!--          <input class="input__field"  v-model="addressLine" id="address-town" placeholder="Town...">-->
-        <!--        </div>-->
         <div class="container__form-field">
           <label for="address-postcode">Postcode</label>
           <input class="input__field" v-model="postcode" id="address-postcode" placeholder="Postcode...">
@@ -76,7 +76,8 @@ export default {
       postcode: null,
       email: null,
       telephone: null,
-      mentions: null
+      mentions: null,
+      clientName: null,
     }
   },
   computed: {
@@ -95,7 +96,9 @@ export default {
           postcode: this.postcode
         },
         email: this.email,
-        telephone: this.telephone
+        telephone: this.telephone,
+        clientName: this.clientName,
+        mentions: this.mentions
       });
     }
   }

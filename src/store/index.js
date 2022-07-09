@@ -104,13 +104,15 @@ export default createStore({
         console.log(err);
       })
     },
-    submitOrder({state, commit}, {address, email, telephone}) {
+    submitOrder({state, commit}, {address, email, telephone, clientName, mentions}) {
       axios.post('/api/order/submit', {
         order : {
           address: address,
           email: email,
           telephone: telephone,
-          items: state.cart
+          items: state.cart,
+          clientName: clientName,
+          mentions: mentions
         }
       }).then((response) => {
         commit(RESET_CART)
