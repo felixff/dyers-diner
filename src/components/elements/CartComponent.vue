@@ -60,7 +60,6 @@ export default {
   components: {},
   data() {
     return {
-      activeService: 'delivery'
     }
   },
   computed: {
@@ -69,11 +68,14 @@ export default {
     },
     cart() {
       return this.$store.state.cart;
+    },
+    activeService() {
+      return this.$store.state.activeService;
     }
   },
   methods: {
     setActiveService(activeService) {
-      this.activeService = activeService;
+      this.$store.commit('setActiveService', activeService);
     },
     removeFromCart(item) {
       this.$store.commit('removeFromCart', item);

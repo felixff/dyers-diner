@@ -935,5 +935,71 @@
       "medium": null,
       "large": null
     }
+  },
+  {
+    "productCode": 96,
+    "productName": "Pepsi Max Can",
+    "productDescription": "",
+    "productCategory": "Cold Drinks",
+    "price": {
+      "regular": "1.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 97,
+    "productName": "Tango Orange Can",
+    "productDescription": "",
+    "productCategory": "Cold Drinks",
+    "price": {
+      "regular": "1.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 98,
+    "productName": "Dr Pepper Can",
+    "productDescription": "",
+    "productCategory": "Cold Drinks",
+    "price": {
+      "regular": "1.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 99,
+    "productName": "Apple Fruit Shoot",
+    "productDescription": "",
+    "productCategory": "Cold Drinks",
+    "price": {
+      "regular": "1.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 100,
+    "productName": "Blackcurrent Fruit Shoot",
+    "productDescription": "",
+    "productCategory": "Cold Drinks",
+    "price": {
+      "regular": "1.00",
+      "medium": null,
+      "large": null
+    }
+  },
+  {
+    "productCode": 101,
+    "productName": "Bottled Water",
+    "productDescription": "",
+    "productCategory": "Cold Drinks",
+    "price": {
+      "regular": "1.00",
+      "medium": null,
+      "large": null
+    }
   }
 ]

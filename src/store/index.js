@@ -8,6 +8,7 @@ const SET_WINDOW_WIDTH = 'setWindowWidth';
 const SET_WINDOW_HEIGHT = 'setWindowHeight';
 const SET_SCROLL_POSITION = 'setScrollPosition';
 const SET_NAVBAR_FIXED = 'setNavbarFixed';
+const SET_ACTIVE_SERVICE = 'setActiveService';
 const ADD_TO_CART = 'addToCart';
 const REMOVE_FROM_CART = 'removeFromCart';
 const TOGGLE_CHECKOUT = 'toggleCheckout';
@@ -25,6 +26,7 @@ export default createStore({
     isNavbarFixed: false,
     checkoutEnabled: false,
     cartEnabled: false,
+    activeService: 'delivery',
     cart: {
       total: 0,
       items: []
@@ -36,6 +38,7 @@ export default createStore({
       addressPostcode: null,
       contactEmail: null,
       contactTel: null,
+      total: 0,
       items: []
     }
   },
@@ -92,6 +95,9 @@ export default createStore({
     [TOGGLE_CHECKOUT](state, enableCheckout) {
       state.checkoutEnabled = enableCheckout;
     },
+    [SET_ACTIVE_SERVICE](state, activeService) {
+      state.activeService = activeService;
+    },
     [TOGGLE_CART](state) {
       state.cartEnabled = !state.cartEnabled;
     }
@@ -107,10 +113,12 @@ export default createStore({
     submitOrder({state, commit}, {address, email, telephone, clientName, mentions}) {
       axios.post('/api/order/submit', {
         order : {
+          serviceType: state.activeService,
           address: address,
           email: email,
           telephone: telephone,
-          items: state.cart,
+          total: state.cart.total,
+          items: state.cart.items,
           clientName: clientName,
           mentions: mentions
         }

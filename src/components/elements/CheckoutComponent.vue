@@ -45,9 +45,12 @@
       <div class="terms">
         You will receive payment instructions via phone or email once your order is accepted.
       </div>
+      <div v-if="cartTotal <= 10 && serviceType === 'delivery'" class="terms text-red-800">
+        Delivery available only on orders of minimum £10.00
+      </div>
       <div class="total-and-submit">
-        <div class="order__total">Total: <span>£{{ cartTotal }}</span></div>
-        <button class="submit-order text-white font-bold py-2 px-4 rounded-full" @click="submitOrder()" :class="[ !detailsVerified || cartTotal <= 0 ? ['disabled', 'opacity-50', 'cursor-not-allowed'] : '']">Submit Order
+        <div class="order__total">Total: <span>£{{ priceForDisplay(cartTotal) }}</span></div>
+        <button class="submit-order text-white font-bold py-2 px-4 rounded-full" @click="submitOrder()" :class="[ !enableSubmitButton ? ['disabled', 'opacity-50', 'cursor-not-allowed'] : '']">Submit Order
         </button>
       </div>
     </div>
@@ -57,6 +60,9 @@
 <script>
 
 // import AddressFinder from "@/components/elements/AddressFinder";
+
+import _ from "lodash";
+import format from "@/components/utils/format";
 
 export default {
   name: "CheckoutComponent",
@@ -83,7 +89,22 @@ export default {
   computed: {
     cartTotal() {
       return this.$store.state.cart.total ?? 0.00;
-    }
+    },
+    serviceType() {
+      return this.$store.state.activeService ;
+    },
+    enableSubmitButton() {
+      return (this.detailsVerified === true &&
+          _.isEmpty(this.addressLine) === false &&
+          _.isEmpty(this.postcode) === false &&
+          _.isEmpty(this.email) === false &&
+          _.isEmpty(this.telephone) === false &&
+          _.isEmpty(this.clientName) === false) &&
+          (this.cartTotal >= 10 || this.serviceType === 'collection');
+    },
+    priceForDisplay() {
+      return price => format.numberWithDecimals(price, true);
+    },
   },
   methods: {
     disableCheckout() {
@@ -216,8 +237,9 @@ export default {
         font-weight: bold;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        gap: 5em;
       }
 
       .submit-order {
